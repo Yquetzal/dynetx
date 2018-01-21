@@ -1,66 +1,11 @@
 from dynetx.utils import make_str
 import dynetx as dn
 from itertools import chain, count
-import past
 
 __all__ = ['node_link_data', 'node_link_graph']
 _attrs = dict(id='id', source='source', target='target')
 
 
-def node_link_data(G, attrs=_attrs):
-    """Return data in node-link format that is suitable for JSON serialization
-    and use in Javascript documents.
-
-    Parameters
-    ----------
-    G : DyNetx graph
-
-    attrs : dict
-        A dictionary that contains three keys 'id', 'source' and 'target'.
-         The corresponding values provide the attribute names for storing
-        DyNetx-internal graph data. The values should be unique. Default
-        value:
-        :samp:`dict(id='id', source='source', target='target')`.
-
-    Returns
-    -------
-    data : dict
-       A dictionary with node-link formatted data.
-
-    Examples
-    --------
-    >>> from dynetx.readwrite import json_graph
-    >>> G = dn.DynGraphTN([(1,2)])
-    >>> data = json_graph.node_link_data(G)
-
-    To serialize with json
-
-    >>> import json
-    >>> s = json.dumps(data)
-
-    Notes
-    -----
-    Graph, node, and link attributes are stored in this format. Note that
-    attribute keys will be converted to strings in order to comply with
-    JSON.
-
-    See Also
-    --------
-    node_link_graph
-    """
-    id_ = attrs['id']
-
-    data = {}
-    data['directed'] = G.is_directed()
-    data['graph'] = G.graph
-    data['nodes'] = [dict(chain(G.node[n].items(), [(id_, n)])) for n in G]
-    data['links'] = []
-    for u, v, timeline in G.interactions_iter():
-        for t in timeline['t']:
-            for tid in past.builtins.xrange(t[0], t[-1]+1):
-                data['links'].append({"source": u, "target": v, "time": tid})
-
-    return data
 
 
 def node_link_graph(data, directed=False, attrs=_attrs):

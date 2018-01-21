@@ -24,7 +24,6 @@ Sequence of **Interaction** events (u, v, +/-, t):
 from dynetx.utils import open_file, make_str, compact_timeslot
 from dynetx import DynGraphTN
 from dynetx import DynDiGraph
-import past.builtins
 
 __author__ = 'Giulio Rossetti'
 __license__ = "GPL"
@@ -142,44 +141,7 @@ def parse_interactions(lines, comments='#', directed=False, delimiter=None, node
     return G
 
 
-def generate_snapshots(G, delimiter=' '):
 
-    for u, v, d in G.interactions():
-        if 't' not in d:
-            raise NotImplemented
-        for t in d['t']:
-            e = [u, v, t[0]]
-            if t[1] is not None:
-                if t[0] != t[1]:
-                    for s in past.builtins.xrange(t[0], t[1]+1):
-                        e = [u, v, s]
-                        yield delimiter.join(map(make_str, e))
-                else:
-                    yield delimiter.join(map(make_str, e))
-            else:
-                yield delimiter.join(map(make_str, e))
-
-
-@open_file(1, mode='wb')
-def write_snapshots(G, path, delimiter=' ', encoding='utf-8'):
-    """Write a DyNetx graph in snapshot graph list format.
-
-
-        Parameters
-        ----------
-
-        G : graph
-            A DyNetx graph.
-
-        path : basestring
-            The desired output filename
-
-        delimiter : character
-            Column delimiter
-        """
-    for line in generate_snapshots(G, delimiter):
-        line += '\n'
-        path.write(line.encode(encoding))
 
 
 def parse_snapshots(lines, comments='#', directed=False, delimiter=None,  nodetype=None, timestamptype=None, keys=None):
