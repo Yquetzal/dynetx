@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+
+    .axis path {
+        display: none;
+    }
+
+    .axis line {
+        shape-rendering: crispEdges;
+        stroke: #000;
+    }
+
+    .axis .minor line {
+        stroke: #777;
+        stroke-dasharray: 2,2;
+    }
+
+    .input-mini {
+        width: 5px;
+    }
+
+    #leftPart{
+        float:left;
+        width:200px;
+        height:800px;
+        overflow-y: scroll;
+    }
+
+    #legendC{
+        float:right;
+        width:300px;
+        height:800px;
+    }
+    #resultSearch { cursor: pointer; }
+
+    #chart {
+        height:800px;
+        overflow-y: scroll;
+    }
+    .node rect {
+        cursor: move;
+        fill-opacity: 1;
+        shape-rendering: crispEdges;
+    }
+
+    .node text {
+        pointer-events: none;
+        text-shadow: 0 1px 0 #fff;
+    }
+
+    .link {
+        fill: none;
+        stroke: #000;
+        stroke-opacity: .5;
+    }
+
+    .link:hover {
+        stroke-opacity: .5;
+    }
+
+    div.tooltip {
+        position: absolute;
+        text-align: center;
+        width: 80px;
+        height: 58px;
+        padding: 2px;
+        font: 12px sans-serif;
+        background: lightsteelblue;
+        border: 0px;
+        border-radius: 8px;
+        pointer-events: none;
+    }
+
+</style>
+<body>
+<!-- Imports
+-->
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://d3js.org/d3.v2.min.js?2.9.1"></script>
+<script src="http://dimplejs.org/dist/dimple.v1.1.5.min.js"></script>
+<script src="https://web.archive.org/web/20160324220311/http://jquery-csv.googlecode.com/git/src/jquery.csv.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+<script src="oldSaved/tools/spin.js"></script>
+
+<script src="designLstreamVisu.js"></script>
+<script src="drawElts.js"></script>
+<script src="readData.js"></script>
+<script src="interactions.js"></script>
+<script src="nodeFuncs.js"></script>
+<script src="otherItemsGestion.js"></script>
+<script src="edgeFuncs.js"></script>
+
+
+
+
+
+
+<!-- HTML code of the page, static, filled by functions
+-->
+<div id="leftPart">
+    <table class="table table-hover " id="resultSearch">
+    </table>
+</div>
+
+<div id="legendC">
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="myRadios" id="optionsRadios1" value="option1" onChange="displayEdges();" >
+                    Detailed edges
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="myRadios" id="optionsRadios2" value="option2" onChange="hideEdges();" checked>
+                    Simplified edges
+                </label>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"># displayed nodes:</span>
+                <input style="max-width:60px" type="text" class="form-control input-mini" id="nbNodes" aria-describedby="inputGroupSuccess1Status" value="20">
+                <button class="btn btn-default" type="button" onclick="changeNbNodes();">Go</button>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="legend">
+
+    </div>
+    <div id="graphs">
+        <div class="panel panel-primary">
+            <div id="generalStats" class="panel-body">
+            </div>
+        </div>
+    </div>
+
+    <div role="tabpanel">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active" onclick="setTimeout(function(){updateTopNodeGraph()},10)"><a href="#LinkSprop" aria-controls="LinkSprop" role="tab" data-toggle="tab">LinkS properties</a></li>
+            <li role="presentation" ><a href="#byStepPlot" aria-controls="byStepPlot" role="tab" data-toggle="tab" onclick="setTimeout(function(){updateByStepPlot()},10)">Cat. by step</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="LinkSprop"><div id="LinkSpropContent"></div> </div>
+            <div role="tabpanel" class="tab-pane" id="byStepPlot"> <div id="byStepPlotContent"></div></div>
+        </div>
+    </div>
+
+</div>
+<p id="chart">
+    </p>
+
+<script>
+    // Define the div for the tooltip
+    var div = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
+
+    var windowsWidth = $(window).width();
+    var margin = {top: 50, right: 10, bottom: 6, left: 50},
+            width = windowsWidth - margin.left - margin.right - 300 - 200 - 50, // remove the width of right and left part, plus intern margin
+            height = 20000 - margin.top - margin.bottom;
+
+    var svg;
+
+    currentPath = "networks/netData/"
+
+
+
+
+
+
+
+
+
+
+
+
+    fileStations= currentPath+"network.sg"
+    //fileProperties= currentPath+"LSproperties"
+    fileNodeOrder= currentPath+"nodeOrder"
+
+
+    currentlyDisplayedAttribute= "Communities/coms.sgc"
+
+
+    advancedPropertiesNames = ["Communities/coms.sgc"]
+    advancedPropertyPaths = []
+    for(i in advancedPropertiesNames){
+        advancedPropertyPaths.push(currentPath+advancedPropertiesNames[i])
+    }
+    nodeOrder = []
+    //fileStations= "networks/test.txt"
+
+    LStream = {}
+    allNodes = {}
+    allEdges = []
+    drawObjects ={}
+
+    detailedEges = false
+
+
+
+
+
+
+    function initGraphics(){
+
+        svg = d3.select("#chart").append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    }
+    function start(){
+        console.log("start function")
+
+        loadNetwork(fileStations);
+    }
+    initGraphics()
+    start()
+
+
+</script>
+
+</body>
+</html>

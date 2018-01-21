@@ -5,7 +5,7 @@ import dynetx as dn
 class FunctionTestCase(unittest.TestCase):
 
     def test_functions(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_interaction(1, 2, 2)
         g.add_interaction(1, 2, 2, e=6)
         g.add_interaction(1, 2, 7, e=11)
@@ -55,7 +55,7 @@ class FunctionTestCase(unittest.TestCase):
         dn.non_interactions(g, 0)
         dn.non_interactions(g)
         self.assertEqual(dn.is_empty(g), False)
-        h = dn.DynGraph()
+        h = dn.DynGraphTN()
         self.assertEqual(dn.is_empty(h), True)
         h = dn.time_slice(g, 2, 4)
         self.assertEqual(len(h.nodes()), 2)
@@ -162,7 +162,7 @@ class FunctionTestCase(unittest.TestCase):
         dn.non_interactions(g, 0)
         dn.non_interactions(g)
         self.assertEqual(dn.is_empty(g), False)
-        h = dn.DynGraph()
+        h = dn.DynGraphTN()
         self.assertEqual(dn.is_empty(h), True)
         h = dn.time_slice(g, 2, 4)
         self.assertEqual(len(h.nodes()), 2)

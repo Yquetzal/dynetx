@@ -8,7 +8,7 @@ import os
 class ReadWriteTestCase(unittest.TestCase):
 
     def test_snapshots_interactions(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_interaction(1, 2, 2)
         g.add_interaction(1, 2, 2, e=6)
         g.add_interaction(1, 2, 7, e=11)
@@ -25,7 +25,7 @@ class ReadWriteTestCase(unittest.TestCase):
         os.remove("test.txt")
 
     def test_snapshots(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_interaction(1, 2, 2)
         g.add_interaction(1, 2, 2, e=6)
         g.add_interaction(1, 2, 7, e=11)
@@ -39,7 +39,7 @@ class ReadWriteTestCase(unittest.TestCase):
         os.remove("test.txt")
 
     def test_snapshots_directed(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_interaction(1, 2, 2)
         g.add_interaction(1, 2, 2, e=6)
         g.add_interaction(1, 2, 7, e=11)
@@ -53,7 +53,7 @@ class ReadWriteTestCase(unittest.TestCase):
         os.remove("test.txt")
 
     def test_interaction_graph(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_interaction(1, 2, 2)
         g.add_interaction(1, 2, 2, e=6)
         g.add_interaction(1, 2, 7, e=11)
@@ -67,7 +67,7 @@ class ReadWriteTestCase(unittest.TestCase):
         os.remove("test2.txt")
 
     def test_interaction_graph_directed(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_interaction(1, 2, 2)
         g.add_interaction(1, 2, 2, e=6)
         g.add_interaction(1, 2, 7, e=11)
@@ -81,7 +81,7 @@ class ReadWriteTestCase(unittest.TestCase):
         os.remove("test2.txt")
 
     def test_interaction_graph_flag(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_interaction(1, 2, 2)
         g.add_interaction(1, 2, 2, e=6)
         g.add_interaction(1, 2, 7, e=11)
@@ -95,7 +95,7 @@ class ReadWriteTestCase(unittest.TestCase):
         os.remove("test3.txt")
 
     def test_snapshot_graph_flag(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_interaction(1, 2, 2)
         g.add_interaction(1, 2, 2, e=6)
         g.add_interaction(1, 2, 7, e=11)
@@ -122,7 +122,7 @@ class ReadWriteTestCase(unittest.TestCase):
         self.assertIsInstance(H, dn.DynDiGraph)
 
     def test_json_undirected(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_interaction(1, 2, 2)
         g.add_interaction(1, 2, 2, e=6)
         g.add_interaction(1, 2, 7, e=11)
@@ -131,7 +131,7 @@ class ReadWriteTestCase(unittest.TestCase):
         g.add_interaction(1, 2, 19)
         data = json_graph.node_link_data(g)
         H = json_graph.node_link_graph(data)
-        self.assertIsInstance(H, dn.DynGraph)
+        self.assertIsInstance(H, dn.DynGraphTN)
 
 
 if __name__ == '__main__':

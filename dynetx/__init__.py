@@ -1,8 +1,9 @@
 from __future__ import absolute_import
 
 import dynetx.classes
-from dynetx.classes import DynGraph
+from dynetx.classes import DynGraphTN
 from dynetx.classes import DynDiGraph
+from dynetx.classes import DynGraphSN
 
 from dynetx.classes.function import *
 

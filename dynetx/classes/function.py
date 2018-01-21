@@ -818,3 +818,6 @@ def inter_event_time_distribution(G, u=None, v=None):
          A dictionary from inter event time to number of occurrences
     """
     return G.inter_event_time_distribution(u, v)
+
+def isolates(G):
+    return G.isolates()

@@ -30,7 +30,7 @@ def node_link_data(G, attrs=_attrs):
     Examples
     --------
     >>> from dynetx.readwrite import json_graph
-    >>> G = dn.DynGraph([(1,2)])
+    >>> G = dn.DynGraphTN([(1,2)])
     >>> data = json_graph.node_link_data(G)
 
     To serialize with json
@@ -88,7 +88,7 @@ def node_link_graph(data, directed=False, attrs=_attrs):
     Examples
     --------
     >>> from dynetx.readwrite import json_graph
-    >>> G = dn.DynGraph([(1,2)])
+    >>> G = dn.DynGraphTN([(1,2)])
     >>> data = json_graph.node_link_data(G)
     >>> H = json_graph.node_link_graph(data)
 
@@ -98,7 +98,7 @@ def node_link_graph(data, directed=False, attrs=_attrs):
     """
 
     directed = data.get('directed', directed)
-    graph = dn.DynGraph()
+    graph = dn.DynGraphTN()
     if directed:
         graph = graph.to_directed()
 

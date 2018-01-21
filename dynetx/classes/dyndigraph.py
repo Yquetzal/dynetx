@@ -1646,8 +1646,8 @@ class DynDiGraph(nx.DiGraph):
         in the data structure, those changes do not transfer to the Graph
         created by this method.
         """
-        from .dyngraph import DynGraph
-        H = DynGraph()
+        from .dyngraphTN import DynGraphTN
+        H = DynGraphTN()
         H.name = self.name
         H.add_nodes_from(self)
 

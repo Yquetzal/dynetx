@@ -6,8 +6,8 @@ import dynetx as dn
 class DynGraphTestCase(unittest.TestCase):
 
     def test_dyngraph_add_interaction(self):
-        g = dn.DynGraph()
-        self.assertIsInstance(g, dn.DynGraph)
+        g = dn.DynGraphTN()
+        self.assertIsInstance(g, dn.DynGraphTN)
 
         g.add_interaction(1, 2, 2)
         g.add_interaction(1, 2, 2, e=6)
@@ -78,7 +78,7 @@ class DynGraphTestCase(unittest.TestCase):
 
 
     def test_nodes(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_star([0, 1, 2, 3, 4], t=5)
         nds = len(g.nodes())
         self.assertEqual(nds, 5)
@@ -99,7 +99,7 @@ class DynGraphTestCase(unittest.TestCase):
         self.assertEqual(g.has_node(0, 0), False)
 
     def test_number_of_interactions(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_path([0, 1, 2, 3, 4], t=5)
         g.add_path([4, 5, 6, 7, 8], t=6)
 
@@ -119,7 +119,7 @@ class DynGraphTestCase(unittest.TestCase):
         self.assertEqual(its, 0)
 
     def test_has_interaction(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_path([0, 1, 2, 3, 4], t=5)
         g.add_path([4, 5, 6, 7, 8], t=6)
 
@@ -129,7 +129,7 @@ class DynGraphTestCase(unittest.TestCase):
         self.assertEqual(g.has_interaction(0, 1, 9), False)
 
     def test_neighbores(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_path([0, 1, 2, 3, 4], t=5)
         g.add_path([4, 5, 6, 7, 8], t=6)
 
@@ -146,7 +146,7 @@ class DynGraphTestCase(unittest.TestCase):
         self.assertEqual(ng, 0)
 
     def test_degree(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_path([0, 1, 2, 3, 4], t=5)
         g.add_path([4, 5, 6, 7, 8], t=6)
 
@@ -163,7 +163,7 @@ class DynGraphTestCase(unittest.TestCase):
         self.assertEqual(ng, 0)
 
     def test_number_of_nodes(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_path([0, 1, 2, 3, 4], t=5)
         g.add_path([4, 5, 6, 7, 8], t=6)
 
@@ -177,33 +177,33 @@ class DynGraphTestCase(unittest.TestCase):
         self.assertEqual(nn, 0)
 
     def test_time_slice(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_path([0, 1, 2, 3, 4], t=5)
         g.add_path([4, 5, 6, 7, 8], t=6)
 
         h = g.time_slice(5)
-        self.assertIsInstance(h, dn.DynGraph)
+        self.assertIsInstance(h, dn.DynGraphTN)
         self.assertEqual(h.number_of_nodes(), 5)
         self.assertEqual(h.number_of_interactions(), 4)
 
 
         h = g.time_slice(5, 5)
-        self.assertIsInstance(h, dn.DynGraph)
+        self.assertIsInstance(h, dn.DynGraphTN)
         self.assertEqual(h.number_of_nodes(), 5)
         self.assertEqual(h.number_of_interactions(), 4)
 
         h = g.time_slice(5, 6)
-        self.assertIsInstance(h, dn.DynGraph)
+        self.assertIsInstance(h, dn.DynGraphTN)
         self.assertEqual(h.number_of_nodes(), 9)
         self.assertEqual(h.number_of_interactions(), 8)
 
         h = g.time_slice(0)
-        self.assertIsInstance(h, dn.DynGraph)
+        self.assertIsInstance(h, dn.DynGraphTN)
         self.assertEqual(h.number_of_nodes(), 0)
         self.assertEqual(h.number_of_interactions(), 0)
 
     def test_temporal_snapshots_ids(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_path([0, 1, 2, 3, 4], t=5)
         g.add_path([4, 5, 6, 7, 8], t=6)
         tsd =g.temporal_snapshots_ids()
@@ -211,7 +211,7 @@ class DynGraphTestCase(unittest.TestCase):
         self.assertEqual(tsd, [5, 6])
 
     def test_interactions_per_snapshots(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_path([0, 1, 2, 3, 4], t=5)
         g.add_path([4, 5, 6, 7, 8], t=6)
 
@@ -225,7 +225,7 @@ class DynGraphTestCase(unittest.TestCase):
         self.assertEqual(tsd, 0)
 
     def test_inter_event_time(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_path([0, 1, 2, 3, 4], t=2)
         g.add_path([4, 5, 6, 7, 8], t=3)
 
@@ -242,7 +242,7 @@ class DynGraphTestCase(unittest.TestCase):
         self.assertDictEqual(ivt, {})
 
     def test_stream_interactions(self):
-        g = dn.DynGraph()
+        g = dn.DynGraphTN()
         g.add_interaction(1, 2, 2)
         g.add_interaction(1, 2, 2, e=6)
         g.add_interaction(1, 2, 7, e=11)
@@ -258,7 +258,7 @@ class DynGraphTestCase(unittest.TestCase):
         self.assertEquals(sorted(sres), sorted(cres))
 
     def test_accumulative_growth(self):
-        g = dn.DynGraph(edge_removal=False)
+        g = dn.DynGraphTN(edge_removal=False)
         g.add_interaction(1, 2, 2)
         g.add_interaction(1, 2, 2, e=6)
         g.add_interaction(1, 2, 7, e=11)

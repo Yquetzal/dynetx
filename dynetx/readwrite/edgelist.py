@@ -22,7 +22,7 @@ Sequence of **Interaction** events (u, v, +/-, t):
 """
 
 from dynetx.utils import open_file, make_str, compact_timeslot
-from dynetx import DynGraph
+from dynetx import DynGraphTN
 from dynetx import DynDiGraph
 import past.builtins
 
@@ -93,7 +93,7 @@ def read_interactions(path, comments="#", directed=False, delimiter=None,
 
 def parse_interactions(lines, comments='#', directed=False, delimiter=None, nodetype=None, timestamptype=None, keys=None):
     if not directed:
-        G = DynGraph()
+        G = DynGraphTN()
     else:
         G = DynDiGraph()
 
@@ -185,7 +185,7 @@ def write_snapshots(G, path, delimiter=' ', encoding='utf-8'):
 def parse_snapshots(lines, comments='#', directed=False, delimiter=None,  nodetype=None, timestamptype=None, keys=None):
 
     if not directed:
-        G = DynGraph()
+        G = DynGraphTN()
     else:
         G = DynDiGraph()
 
@@ -272,4 +272,3 @@ def read_ids(path, delimiter=None, timestamptype=None):
 
     ids = compact_timeslot(ids.keys())
     return ids
-

@@ -1,0 +1,86 @@
+Rodrik_Cassel	0_1:2	3_4:2	1_3:1
+Theon_Greyjoy	0_2:2	3_5:2	2_3:1	5_8:1	9_11:0
+Brandon_Stark	0_9:2
+Catelyn_Stark	0_1:2	1_7:1
+Luwin	0_5:2
+Hodor	0_9:2
+Robb_Stark	0_2:2	2_7:1
+Jon_Snow	0_4:3	4_11:7
+Alliser_Thorne	0_2:3	6_10:7
+Rast	0_2:3	4_6:3	7_8:2
+Pypar	0_3:3	6_8:7
+Grenn	0_6:3	6_9:7
+Samwell_Tarly	0_6:3	6_7:2	7_11:7
+Eddard_Stark	0_3:0	4_5:2
+Petyr_Baelish	0_3:0	7_9:0	3_7:5	9_10:5
+Robert_Baratheon	0_2:0
+Pycelle	0_4:0	4_5:5	6_9:5
+Renly_Baratheon	0_2:0	2_3:1	3_4:6
+Janos_Slynt	0_3:0	6_9:7
+Sandor_Clegane	0_1:0	2_9:0
+Lancel	0_4:0	4_5:5	8_10:5
+Joffrey_Baratheon	0_4:0	4_7:5
+Sansa_Stark	0_4:0	7_11:0	4_7:5
+Cersei_Lannister	0_4:0	4_10:5
+Arya_Stark	0_1:0	4_11:0	1_4:5
+Varys	0_4:0	4_9:5	9_11:4
+Gendry	0_2:0	4_6:0	2_4:5	6_7:6
+Jaime_Lannister	0_6:1	6_9:5	9_11:8
+Jeor_Mormont	0_1:1	1_6:3
+Myrcella_Baratheon	0_1:1	2_3:0	9_11:8
+Ros	0_1:1	1_2:2	2_4:0	4_6:5
+Yoren	0_1:1	1_3:5	4_5:5
+Tyrion_Lannister	0_2:1	2_4:0	4_9:5	9_11:4
+Barristan_Selmy	0_1:1	1_3:0	4_10:4
+Aemon	0_1:1	1_3:3	6_10:7
+Drogo	0_3:4	4_5:4
+Jorah_Mormont	0_8:4	9_11:4
+Irri	0_4:4
+Daenerys_Targaryen	0_11:4
+Viserys_Targaryen	0_2:4
+Bronn	1_2:1	2_5:0	5_9:5	9_11:8
+Tywin_Lannister	1_3:1	3_9:5
+Kevan_Lannister	1_3:1	3_4:5	8_9:5
+Meryn_Trant	1_2:5	6_9:5	2_5:0
+Loras_Tyrell	1_2:0	2_3:1	3_7:5	8_10:5
+Rickon_Stark	1_7:2
+Osha	1_7:2
+Rickard_Karstark	2_6:1
+Talisa_Maegyr	2_7:1
+Margaery_Tyrell	2_3:1	3_7:5	8_10:5	7_8:0
+Roose_Bolton	2_8:1	8_10:0
+Brienne_of_Tarth	2_6:1	6_8:5	8_9:0	9_11:9
+Yara_Greyjoy	2_3:1	7_8:1	3_4:2
+Shae	2_4:0	4_8:5
+Podrick_Payne	2_3:0	4_5:0	8_9:0	5_8:5	9_11:9
+Tommen_Baratheon	2_3:0	7_8:0	4_5:5	6_7:5	8_10:5
+Gilly	2_3:3	5_6:3	6_7:2	7_11:7
+Eddison_Tollett	2_6:3	6_11:7
+Jaqen_H'ghar	2_4:5	4_5:0	8_11:0
+Hot_Pie	2_4:5	7_8:5	4_5:0
+Melisandre	2_5:6	6_8:6	5_6:0	8_10:7	10_11:9
+Davos_Seaworth	2_8:6	8_10:7	10_11:9
+Stannis_Baratheon	2_8:6	8_10:7	10_11:9
+Ygritte	3_4:3	4_9:7
+Olenna_Tyrell	4_7:5	9_10:5	7_8:0
+Locke	4_7:1	7_8:7
+Qyburn	4_6:1	6_7:5	8_10:5
+Missandei	4_11:4
+Thoros	4_6:0
+Anguy	4_6:0
+Orell	4_7:7
+Tormund	4_11:7
+Meera_Reed	4_9:2
+Ramsay_Bolton	4_5:2	5_8:1	8_10:0
+Jojen_Reed	4_9:2
+Grey_Worm	5_11:4
+Daario_Naharis	5_11:4
+Shireen_Baratheon	5_7:6	8_10:7	10_11:9
+Selyse_Baratheon	5_8:6	8_10:7	10_11:9
+Olyvar	5_7:5	8_10:5
+Myranda	5_8:1	9_11:0
+Oberyn_Martell	6_8:5
+Ellaria_Sand	6_8:5	10_11:8
+Mace_Tyrell	6_10:5
+Hizdahr_zo_Loraq	7_11:4
+Olly	7_11:7

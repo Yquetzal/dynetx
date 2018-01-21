@@ -1,3 +1,4 @@
 from .dyndigraph import DynDiGraph
-from .dyngraph import DynGraph
+from .dyngraphTN import DynGraphTN
 from .function import *
+from .dynGraphSN import DynGraphSN
