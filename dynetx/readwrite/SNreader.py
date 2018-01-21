@@ -148,12 +148,15 @@ def show(dynCommunities,dynGraph):
     dynCommunities.writeEvents(os.path.join(dir,"visu/networks/netData/Communities/events.evts"))
     dn.writeGoodNodeOrder(dynCommunities, os.path.join(dir,"visu/networks/netData/nodeOrder"))
 
+    visuAddress = "file:///" + visuAddress
+
     if sys.platform == "darwin":
-        visuAddress = "file:///" + visuAddress
         #visuAddress = "http://127.0.0.1:8000/" + visuAddress
         webbrowser.get("firefox").open_new(visuAddress)
     else:
-        if sys.platform== "windows":
-            webbrowser.get("open -a C:\\Program F~\\Mozilla Firefox\\firefox.exe %s").open_new(visuAddress)
+        if sys.platform== "win32":
+            if not "firefox" in webbrowser._tryorder:
+                fpath = "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+                webbrowser.register('firefox', None, webbrowser.BackgroundBrowser(fpath))
         else:
             webbrowser.get("firefox").open_new(visuAddress)
