@@ -1,1239 +1,522 @@
-LS	0	104
-N	Gared	0	1
-N	Waymar_Royce	0	1
-N	Will	0	1
-N	Cersei_Lannister	0	4	5	8	10	30	31	32	35	57	59	60	61	64	65	69	70	76	80	92	94	100	102	104
-N	Jaime_Lannister	0	4	5	8	9	11	12	16	21	26	35	39	42	44	46	59	64	72	74	76	78	79	80	86	89	92	94	96	97	99	100	104
-N	Theon_Greyjoy	0	2	4	5	7	9	10	16	17	24	25	30	32	40	42	44	47	53	55	57	58	59	62	64	66	68	73	75	76	78	92	94	95	100	102	104
-N	Robb_Stark	0	3	4	9	12	14	17	27	29	30	33	39	42	50	53	58	60	63
-N	Jon_Snow	0	5	6	11	14	29	32	39	43	50	52	59	60	61	63	67	68	77	78	97	98	103
-N	Eddard_Stark	0	21	45	47
-N	Brandon_Stark	0	2	3	4	5	9	10	14	18	20	21	23	24	26	27	29	32	36	43	49	50	52	54	56	58	59	60	64	67	69	70	75	80	82
-N	Sansa_Stark	0	3	5	7	8	12	13	15	16	25	28	30	33	37	39	44	45	48	51	53	54	58	59	60	61	63	64	74	76	78	82	86	87	94	95	100	102	104
-N	Mordane	0	1	5	7	8	11	13	15	16	18
-N	Rodrik_Cassel	0	1	4	7	10	12	19	23	25	27	32	34
-N	Catelyn_Stark	0	8	10	15	17	24	25	29	30	35	36	38	42	52	53	58	60	63
-N	Arya_Stark	1	2	3	4	5	15	16	19	21	28	29	31	32	36	37	40	43	45	47	50	51	59	60	61	63	70	71	78	81	83	84	89	93	96	98	104
-N	Robert_Baratheon	1	2	3	8	9	16
-N	Luwin	1	3	4	5	7	9	10	12	14	16	17	19	24	26	27	29	32	40	42	45
-N	Ros	1	2	10	12	13	16	23	28	29	30	37	39	42	44	45	47	49	52
-N	Tyrion_Lannister	1	9	10	15	17	30	31	35	36	46	47	60	61	71	74	77	78	79	81	87	88	100	101	104
-N	Viserys_Targaryen	1	4	6	11	13	16
-N	Illyrio_Mopatis	1	3	11	13
-N	Daenerys_Targaryen	1	11	14	28	30	31	32	37	38	40	42	47	49	55	57	63	64	67	69	78	80	88	91	95	97	100	101	103
-N	Jorah_Mormont	2	4	6	11	13	28	30	31	32	34	35	37	38	40	42	47	49	51	53	55	57	59	60	63	64	67	69	73	75	78	91	96	97	100	101	104
-N	Drogo	2	3	7	9	14	17	18	22	43	45
-N	Benjen_Stark	2	3	4	5	6	8
-N	Myrcella_Baratheon	3	4	23	25	28	30	94	96	97	99	100	104
-N	Jhiqui	3	5
-N	Irri	3	5	6	8	9	11	20	22	26	28	32	33
-N	Sandor_Clegane	3	4	5	6	22	25	29	30	33	36	38	43	47	50	51	54	58	59	60	70	71	78	81	83
-N	Joffrey_Baratheon	3	4	5	7	13	15	16	18	19	27	29	30	33	35	38	44	45	49	50	52	57	60	61	63	65	69
-N	Doreah	4	6	8	11	24	26	32	33	43	45
-N	Nan	5	7
-N	Varys	5	7	8	10	11	13	14	21	23	30	37	41	42	44	48	53	56	58	61	64	66	68	71	73	74	76	82	87	88	91	102	104
-N	Petyr_Baelish	5	21	23	32	33	34	42	44	45	47	48	51	52	58	67	73	76	78	82	86	87	92	94	96	97	99
-N	Renly_Baratheon	5	7	8	17	27	32
-N	Alliser_Thorne	5	11	15	17	65	67	68	72	75	77	78	80	82	84	92	94	95	97	98	99
-N	Pycelle	5	7	8	10	11	15	17	30	38	40	42	44	48	50	61	63	66	69	71	73	74	76	78	79	80	82	83	87	88	90
-N	Mycah	5	6
-N	Jeor_Mormont	5	9	15	21	23	26	27	29	32	34	47	50	51	53
-N	Royal_Steward	5	6	11	13	16	18	19	21
-N	Jory_Cassel	5	6	8	14
-N	Rast	6	11	47	53	70	73
-N	Rakharo	6	8	15	17	18	22	24	26
-N	Barristan_Selmy	6	8	10	12	13	18	19	21	45	47	49	51	53	55	57	59	60	61	64	67	69	73	77	78	82	84	85	88	91	93
-N	Yoren	6	8	10	13	21	25	29	30	47	49
-N	Lancel	6	8	10	12	22	24	29	30	31	32	39	42	83	85	88	91	94	96
-N	Grenn	6	11	22	28	32	33	37	39	43	45	47	49	50	53	69	77	78	81
-N	Pypar	6	11	15	17	18	21	22	24	63	65	68	70	76	77	78	80
-N	Samwell_Tarly	7	11	14	29	32	34	37	39	43	45	47	49	50	53	54	56	60	61	62	67	68	72	76	77	78	81	82	84	85	87	88	94	95	103
-N	Syrio_Forel	7	9	12	14	16	18
-N	Aemon	7	9	15	17	20	22	63	67	68	70	78	79	85	87	91	93	96	98
-N	Hodor	7	9	18	20	27	29	32	33	34	36	45	47	54	56	58	59	60	64	71	75	80	82
-N	Janos_Slynt	8	10	16	18	21	23	24	28	65	67	68	72	75	77	78	80	85	87	88	90
-N	Hugh	8	10
-N	Gendry	9	11	23	28	29	31	33	34	37	40	47	50	51	54	55	60	62	65
-N	Tobho_Mott	9	11	25	27
-N	Marillion	10	12	21	23
-N	Gregor_Clegane	10	12	30	31	34	36	74	76	78	79
-N	Bronn	10	15	17	25	26	30	31	33	37	41	44	46	49	51	57	59	64	72	75	77	84	86	89	92	94	96	97	99	100	104
-N	Robin_Arryn	11	15	17	19	71	73	76	78
-N	Lysa_Arryn	11	15	17	19	71	74	76	77
-N	Vardis_Egen	11	15
-N	Loras_Tyrell	12	14	27	30	31	32	42	44	45	48	54	57	59	60	67	69	83	85	89	91	95	97	98	99
-N	Mord	12	15
-N	Osha	12	16	18	20	21	23	24	26	32	36	38	40	43	49	54	56	58	59	60	62
-N	Stiv	12	14
-N	Wallen	12	14
-N	Mhaegen	12	14	25	27
-N	Joss	13	15	94	96
-N	Eon_Hunter	13	15
-N	Beric_Dondarrion	13	15	51	59
-N	Tywin_Lannister	14	16	19	24	30	31	32	36	37	39	44	46	48	50	51	53	54	60	61	63	64	70	71	73	74	76	80	83
-N	Tomard	15	17
-N	Wineseller	15	17
-N	Meryn_Trant	16	18	29	30	33	35	44	47	65	67	74	76	85	87	88	90	100	102
-N	Lannister_guardsman_	16	18
-N	Othell_Yarwyck	17	19	68	70	75	77	92	94
-N	Night's_Watch_messenger	17	19
-N	Stableboy	17	19
-N	Shagga	17	21
-N	Jon_Umber	18	24
-N	Rickon_Stark	18	20	21	23	33	36	43	45	54	56	60	62
-N	Mago	18	20
-N	Mirri_Maz_Duur	18	25
-N	Qotho	18	22
-N	Stark_guard_	19	21	36	38
-N	Lannister_messenger_	19	21
-N	Kevan_Lannister	19	24	37	39	83	87
-N	Stevron_Frey	19	21
-N	Walder_Frey	19	21	60	64
-N	Ryger_Rivers	19	21
-N	Lannister_scout_	19	21
-N	Shae	20	24	25	27	28	30	33	44	45	49	56	59	62	68	74	76
-N	King's_Landing_baker	21	23
-N	King's_Landing_urchin	21	23
-N	Rickard_Karstark	22	24	35	38	44	48	53	55
-N	Jonos_Bracken	22	24
-N	Leo_Lefford	22	24
-N	Addam_Marbrand	22	24
-N	Dontos_Hollard	23	25	65	69
-N	Melee_Herald	23	25
-N	Hot_Pie	23	25	26	28	29	31	37	40	47	50	75	77
-N	Lommy	23	25	26	28	29	30
-N	Leadranach	24	26
-N	Cressen	24	26
-N	Melisandre	24	26	27	29	30	32	42	44	45	47	49	51	54	60	63	65	66	68	75	77	82	84	90	92	96	98	101	103
-N	Stannis_Baratheon	24	26	27	29	30	32	38	44	45	47	49	51	53	55	59	60	63	65	66	70	73	75	80	84	85	89	90	95	96	98	99	103
-N	Davos_Seaworth	24	26	27	29	31	32	38	41	44	47	53	55	59	60	62	65	66	70	73	75	80	84	85	89	92	95	96	98	99	101
-N	Lord_Portan	24	26
-N	Craster	24	26	27	29	48	50	51	53
-N	Gilly	24	29	50	53	54	56	60	61	62	65	68	70	76	77	78	79	82	84	85	87	92	94	96	98	99	101
-N	Matthos_Seaworth	24	26	27	29	38	41
-N	Eddison_Tollett	24	28	32	33	37	39	43	45	47	49	50	53	69	71	72	75	76	77	78	81	88	90	92	94	99	101
-N	Jaqen_H'ghar	25	27	29	30	32	35	37	39	43	45	84	89	93	95	98	104
-N	Rorge	25	27	29	30	37	39	74	76
-N	Alton_Lannister	25	28	35	37
-N	Daisy	25	27	29	30
-N	Marei	25	27	49	51	64	66
-N	Lordsport_dockhand	26	28
-N	Balon_Greyjoy	26	30	62	64
-N	Yara_Greyjoy	26	30	32	33	36	38	62	64	73	75
-N	Ros'_customer	26	28
-N	Captain's_Daughter	26	28
-N	Podrick_Payne	26	28	40	46	49	51	52	54	61	74	75	77	81	86	87	89	92	94	101	103
-N	Margaery_Tyrell	27	32	42	44	45	49	50	53	54	58	59	60	65	73	83	85	86	89	90	92	95	99
-N	Gerald	27	29
-N	Brienne_of_Tarth	27	29	31	33	36	39	42	44	46	59	65	69	70	74	75	77	81	86	87	89	92	94	101	103
-N	Colen_of_Greenpools	27	29
-N	Salladhor_Saan	27	29	44	46	73	75
-N	Tommen_Baratheon	28	30	41	43	67	69	70	72	86	89	90	92	97	99
-N	Drowned_Priest	28	30
-N	Roose_Bolton	29	30	33	39	44	48	52	54	55	59	61	64	66	68	77	78	87	90	92	94	95	97	98	100
-N	Wounded_Lannister	29	30
-N	Amory_Lorch	29	30	32	35
-N	Polliver	29	31	65	67
-N	Talisa_Maegyr	29	30	33	39	42	50	53	55	56	58	61	63
-N	Timett	29	30
-N	Old_Woman_Prisoner	30	31
-N	The_Tickler	30	31
-N	Tortured_prisoner	30	31
-N	The_Spice_King	30	31	33	37
-N	Xaro_Xhoan_Daxos	30	31	32	37	43	45
-N	Kovarro	30	31	32	33	42	44
-N	Protestor	31	32
-N	Emmon_Cuy	31	32
-N	Reginald_Lannister	32	33
-N	Quaithe	32	33	35	37
-N	Qartheen_woman	32	33
-N	Hallyne	32	33
-N	Winterfell_shepher	32	33
-N	Dagmer	32	37	38	40	42	44
-N	Lorren	32	36	42	44
-N	Pyat_Pree	32	33	35	37	43	45
-N	Lannister_Captain	33	34
-N	Ygritte	33	38	43	50	52	59	60	62	63	67	78	81
-N	Qhorin	33	34	36	39	43	45
-N	Farlen	33	34
-N	Drennan	33	35
-N	Torrhen_Karstark	35	37
-N	Winterfell_Farmer	35	37
-N	Master_of_hounds	35	37
-N	Handmaiden	35	37	65	67
-N	Silk_King	35	37
-N	Stark_messenger	36	38
-N	Lord_of_Bones	36	38	43	46	99	101
-N	Jacks	36	38
-N	Singing_Lannister_soldier	38	40
-N	Armeca	38	40
-N	Mandon_Moore	39	41
-N	Captain_of_the_Archers	39	42
-N	Baratheon_officer	40	42
-N	Septon	42	44
-N	Tom	42	44
-N	Stark_soldier_	42	44
-N	Tormund	44	46	48	50	52	57	60	62	65	67	78	82	91	93	99	101
-N	Qyburn	44	46	52	54	58	59	65	67	80	82	85	87	88	90	98	100
-N	Mance_Rayder	44	50	80	82	84	86
-N	Boat_commander	44	46
-N	Mirelle	44	46
-N	Missandei	45	47	49	55	57	60	64	67	69	71	73	75	76	77	80	84	93	95	102	104
-N	Kraznys_mo_Nakloz	45	47	49	53
-N	Unsullied_	45	47
-N	Margaery's_handmaiden	45	47
-N	Orphan_kid	45	47
-N	Jojen_Reed	45	49	50	52	54	56	58	59	60	64	67	69	70	75	80	82
-N	Olenna_Tyrell	46	48	50	54	55	57	65	71	95	99
-N	Tyrell_servant	46	48
-N	Riverlands_traveller	46	49
-N	Orell	46	50	52	58	60	62
-N	King's_Landing_tailor	46	48
-N	Anguy	47	50	51	59
-N	Thoros	47	50	51	59
-N	Ramsay_Bolton	47	53	55	57	58	59	62	64	66	68	73	75	76	78	87	90	92	94	95	100	101	103
-N	Meera_Reed	47	49	54	56	58	59	60	64	67	69	70	74	80	82
-N	Master_Torturer	47	51
-N	Locke	47	49	50	54	58	59	66	68	70	74
-N	Brynden_Tully	48	50	55	58	61	63
-N	Edmure_Tully	48	50	53	58	60	62
-N	Martyn_Lannister	48	50	53	55
-N	Greizhen_mo_Ullhor	49	51
-N	Tyrell_lady	51	53
-N	Karl_Tanner	51	53	70	74
-N	Willem_Lannister	53	55
-N	Karstark_lookout	53	55
-N	Selyse_Baratheon	53	55	66	68	75	77	85	87	90	92	93	95	101	103
-N	Shireen_Baratheon	53	55	63	65	66	70	85	87	90	92	93	95	99	103
-N	Grey_Worm	53	55	58	59	60	61	64	66	69	71	76	77	80	84	85	88	93	95	102	104
-N	Olyvar	54	56	64	66	68	70	83	85	88	90	95	97	98	99
-N	Walder_Rivers	55	57
-N	Lothar_Frey	55	57	61	63
-N	Razdal_mo_Eraz	57	59
-N	Myranda	58	59	66	68	73	75	92	94	95	97	98	99	102	104
-N	Violet	58	59
-N	Walton	58	59
-N	Mero	58	60
-N	Prendahl_na_Ghezn	58	60
-N	Daario_Naharis	58	62	64	67	69	73	75	77	83	88	91	93	97	99	101	104
-N	Merry_Frey	60	61
-N	Old_Man	60	62
-N	Roslin_Tully	60	62
-N	Hog_farmer	60	61
-N	Frey_Guard	61	63
-N	Ellaria_Sand	64	66	67	70	78	79	85	87	91	93	100	102
-N	Oberyn_Martell	64	66	67	70	72	77	78	79
-N	Morgan's_friend	64	66
-N	Morgan	64	66
-N	Blackmont	64	66
-N	Innkeeper	65	67
-N	Styr	65	67	68	70	78	80
-N	Walda_Bolton	66	68	92	94
-N	Tansy	66	68
-N	Axell_Florent	66	68
-N	Mace_Tyrell	66	68	74	76	85	87	88	91	100	102
-N	Musician_	67	69
-N	Farmer	67	70
-N	The_High_Septon	67	69	71	73	82	84	88	90
-N	Olly	68	72	82	84	87	89	92	94	99	101
-N	Guymon	68	70
-N	Mole's_Town_whore	68	70	76	77
-N	Olly's_mother	68	70
-N	Night's_Watch_Officer	68	70
-N	Mole's_Town_madam	68	70
-N	Mossador	69	71	82	84	85	88
-N	Valyrian_slave	69	71
-N	Elder_slave	69	71
-N	Craster's_wife	70	72
-N	Donnel_Waynwood	71	73	77	78
-N	Tycho_Nestoris	73	75	100	102
-N	First_Mate	73	75
-N	Bolton_guard	73	75
-N	Ironborn_in_skiff	73	75
-N	Morag	73	75
-N	Lhara	73	75	100	102
-N	Great_Master	73	76	91	93
-N	Hizdahr_zo_Loraq	73	75	83	88	91	95	97	99	101	103
-N	Dying_man	74	76
-N	Kegs	76	77
-N	Adrack_Humble	76	77
-N	Ralf_Kenning	76	77
-N	Jack_Bulwer	76	77
-N	Anya_Waynwood	77	78
-N	Yohn_Royce	77	78	82	84
-N	Vance_Corbray	77	78
-N	Little_Bird	77	78
-N	Donnel_Hill	79	81
-N	Cooper	79	81
-N	Fennesz	80	82
-N	Goatherd	80	82
-N	Child_of_the_Forest	80	82
-N	The_three-eyed_raven	80	82
-N	Maggy	81	83
-N	Melara_Hethersoon	81	83
-N	Ternesio_Terys	81	83	84	86
-N	Helliweg	82	84
-N	Samwell_Stone	82	84
-N	Inn_waitress	84	86
-N	Eyrie_Guard	84	86
-N	Lollys_Stokeworth	84	86
-N	Areo_Hotah	85	87	94	96	100	102
-N	Mallister_supporter	85	87
-N	Doran_Martell	85	87	94	96	100	104
-N	Despondent_man	86	88
-N	The_Waif	87	89	93	95	98	100	102	104
-N	Red_Priestess	88	90
-N	High_Sparrow	88	91	95	99	102	104
-N	Old_woman_	88	90	92	94
-N	Whore_(Mother_of_Dragons)	89	91
-N	Clea	89	91
-N	Merchant_captain	89	91
-N	Lead_Dornish_guard	90	92
-N	Boake	90	92
-N	Lead_Kingsguard	90	92
-N	Nymeria_Sand	91	93	94	96	97	99	100	102
-N	Obara_Sand	91	93	94	96	97	99
-N	Tyene_Sand	91	93	97	99	100	104
-N	Winter_town_man	92	94
-N	Bowen_Marsh	92	94
-N	Malko	94	98
-N	Slaver_	94	96
-N	Trystane_Martell	94	96	100	102
-N	Ghita	94	96
-N	Brant	96	98
-N	Derek	96	98
-N	Yezzan_zo_Qaggaz	96	100
-N	Unella	98	100
-N	Braavosi_Captain	98	100
-N	The_thin_man	98	102
-N	Wildling_elder	99	101
-N	Wun_Weg_Wun_Dar_Wun	99	101
-N	Loboda	99	101
-N	Karsi	99	101
-N	Johnna's_sister	99	101
-N	Todder	99	101
-N	Braavosi_Madam	100	102
-N	Brusco	100	102
-N	Sailor	100	102
-N	Strong_Fighter	101	103
-N	Pit_Fighter_	101	103
-N	Fighting_pit_announcer	101	103
-N	Baratheon_soldier_	101	103
-N	Baratheon_General	101	103
-E	Gared	Waymar_Royce	0	1
-E	Gared	Will	0	1
-E	Waymar_Royce	Will	0	1
-E	Cersei_Lannister	Jaime_Lannister	0	1	3	4	6	8	65	69	70	72	80	86
-E	Cersei_Lannister	Arya_Stark	1	2	5	6
-E	Cersei_Lannister	Robert_Baratheon	1	2	5	6	12	16
-E	Cersei_Lannister	Sansa_Stark	2	3	17	21	28	30	35	37	39	42
-E	Cersei_Lannister	Catelyn_Stark	2	4
-E	Cersei_Lannister	Tyrion_Lannister	3	4	24	30	31	32	36	39	44	46	48	50	54	57	62	64
-E	Cersei_Lannister	Eddard_Stark	5	6	10	18
-E	Cersei_Lannister	Joffrey_Baratheon	5	7	16	18	19	21	25	27	42	44	45	48	50	52	59	60	61	63
-E	Cersei_Lannister	Barristan_Selmy	16	18	19	21
-E	Cersei_Lannister	Pycelle	17	21	26	28	38	40	61	63	67	69	80	82	83	87
-E	Cersei_Lannister	Varys	19	21	24	26	61	63	74	76
-E	Cersei_Lannister	Janos_Slynt	21	23	24	26
-E	Cersei_Lannister	Lancel	22	24	40	42	83	85
-E	Cersei_Lannister	Petyr_Baelish	25	27	52	54	94	96
-E	Cersei_Lannister	Alton_Lannister	26	28
-E	Cersei_Lannister	Myrcella_Baratheon	28	30
-E	Cersei_Lannister	Tommen_Baratheon	28	30	41	43	87	89	90	92	97	99
-E	Cersei_Lannister	Mandon_Moore	39	41
-E	Cersei_Lannister	Shae	40	42
-E	Cersei_Lannister	Margaery_Tyrell	45	47	59	60	71	73	87	89	97	99
-E	Cersei_Lannister	Olenna_Tyrell	50	52	95	97	98	99
-E	Cersei_Lannister	Tywin_Lannister	51	53	54	56	61	63	66	69	71	73	74	76	80	82
-E	Cersei_Lannister	Loras_Tyrell	59	60	83	85
-E	Cersei_Lannister	Qyburn	65	67	80	82	85	87	88	90	98	100
-E	Cersei_Lannister	Dontos_Hollard	67	69
-E	Cersei_Lannister	Oberyn_Martell	67	69	72	76
-E	Cersei_Lannister	Brienne_of_Tarth	67	69
-E	Cersei_Lannister	Gregor_Clegane	74	76
-E	Cersei_Lannister	Maggy	81	83
-E	Cersei_Lannister	Melara_Hethersoon	81	83
-E	Cersei_Lannister	The_High_Septon	82	84	88	90
-E	Cersei_Lannister	Kevan_Lannister	83	87
-E	Cersei_Lannister	Meryn_Trant	85	87	88	90
-E	Cersei_Lannister	Mace_Tyrell	85	87	89	91
-E	Cersei_Lannister	High_Sparrow	88	91	97	99	102	104
-E	Cersei_Lannister	Olyvar	95	97	98	99
-E	Cersei_Lannister	Unella	98	100
-E	Jaime_Lannister	Ros	1	2
-E	Jaime_Lannister	Tyrion_Lannister	1	2	3	4	66	68	69	71	74	76	78	79	81	83
-E	Jaime_Lannister	Eddard_Stark	2	3	5	6	12	14
-E	Jaime_Lannister	Jon_Snow	3	4
-E	Jaime_Lannister	Brandon_Stark	3	4
-E	Jaime_Lannister	Robert_Baratheon	6	8
-E	Jaime_Lannister	Barristan_Selmy	6	8
-E	Jaime_Lannister	Jory_Cassel	9	11	12	14
-E	Jaime_Lannister	Petyr_Baelish	12	14
-E	Jaime_Lannister	Tywin_Lannister	14	16	64	66	74	76
-E	Jaime_Lannister	Robb_Stark	21	23	24	26
-E	Jaime_Lannister	Catelyn_Stark	21	24	36	38
-E	Jaime_Lannister	Theon_Greyjoy	21	23
-E	Jaime_Lannister	Alton_Lannister	35	37
-E	Jaime_Lannister	Brienne_of_Tarth	37	39	42	44	46	50	51	55	57	59	65	67	70	72
-E	Jaime_Lannister	Tom	42	44
-E	Jaime_Lannister	Stark_soldier_	42	44
-E	Jaime_Lannister	Riverlands_traveller	46	48
-E	Jaime_Lannister	Locke	47	49	50	52	58	59
-E	Jaime_Lannister	Roose_Bolton	52	54	55	59
-E	Jaime_Lannister	Qyburn	52	54	58	59	65	67
-E	Jaime_Lannister	Walton	58	59
-E	Jaime_Lannister	Meryn_Trant	65	67
-E	Jaime_Lannister	Handmaiden	65	67
-E	Jaime_Lannister	Joffrey_Baratheon	65	67
-E	Jaime_Lannister	Podrick_Payne	66	68	70	72
-E	Jaime_Lannister	Bronn	66	68	69	72	84	86	89	92	94	96	100	102
-E	Jaime_Lannister	Olenna_Tyrell	67	69
-E	Jaime_Lannister	Loras_Tyrell	67	69
-E	Jaime_Lannister	The_High_Septon	67	69
-E	Jaime_Lannister	Tommen_Baratheon	67	69
-E	Jaime_Lannister	Merchant_captain	89	91
-E	Jaime_Lannister	Lead_Dornish_guard	90	92
-E	Jaime_Lannister	Myrcella_Baratheon	94	96	97	99	100	104
-E	Jaime_Lannister	Trystane_Martell	94	96	100	102
-E	Jaime_Lannister	Doran_Martell	100	104
-E	Jaime_Lannister	Ellaria_Sand	100	102
-E	Theon_Greyjoy	Robb_Stark	0	2	4	5	12	14	17	24	25	27
-E	Theon_Greyjoy	Jon_Snow	0	2
-E	Theon_Greyjoy	Eddard_Stark	0	1
-E	Theon_Greyjoy	Brandon_Stark	0	1	7	9	10	14	33	34
-E	Theon_Greyjoy	Luwin	4	5	14	16	33	38	42	44
-E	Theon_Greyjoy	Catelyn_Stark	4	5	19	21
-E	Theon_Greyjoy	Tyrion_Lannister	7	9
-E	Theon_Greyjoy	Hodor	7	9
-E	Theon_Greyjoy	Ros	10	12	13	15
-E	Theon_Greyjoy	Osha	14	16	33	35
-E	Theon_Greyjoy	Jon_Umber	19	21
-E	Theon_Greyjoy	Rickard_Karstark	22	24
-E	Theon_Greyjoy	Lordsport_dockhand	26	28
-E	Theon_Greyjoy	Balon_Greyjoy	26	30
-E	Theon_Greyjoy	Captain's_Daughter	26	28
-E	Theon_Greyjoy	Yara_Greyjoy	26	30	32	33	36	38	73	75
-E	Theon_Greyjoy	Drowned_Priest	28	30
-E	Theon_Greyjoy	Dagmer	32	36	38	40
-E	Theon_Greyjoy	Lorren	32	36	42	44
-E	Theon_Greyjoy	Rodrik_Cassel	33	34
-E	Theon_Greyjoy	Farlen	33	34
-E	Theon_Greyjoy	Winterfell_Farmer	35	37
-E	Theon_Greyjoy	Master_of_hounds	35	37
-E	Theon_Greyjoy	Ramsay_Bolton	47	53	55	57	58	59	62	64	66	68	73	75	76	78	92	94	95	97	98	99
-E	Theon_Greyjoy	Master_Torturer	47	51
-E	Theon_Greyjoy	Myranda	58	59	102	104
-E	Theon_Greyjoy	Violet	58	59
-E	Theon_Greyjoy	Roose_Bolton	66	68	95	97	98	99
-E	Theon_Greyjoy	Tansy	66	68
-E	Theon_Greyjoy	Locke	66	68
-E	Theon_Greyjoy	First_Mate	73	75
-E	Theon_Greyjoy	Adrack_Humble	76	77
-E	Theon_Greyjoy	Ralf_Kenning	76	77
-E	Theon_Greyjoy	Sansa_Stark	95	100	102	104
-E	Robb_Stark	Jon_Snow	0	1	4	5	45	47
-E	Robb_Stark	Benjen_Stark	2	3
-E	Robb_Stark	Luwin	4	5	17	19
-E	Robb_Stark	Rodrik_Cassel	4	5	19	21	25	27
-E	Robb_Stark	Catelyn_Stark	4	5	19	23	25	27	33	35	36	38	42	48	55	58	60	61
-E	Robb_Stark	Nan	5	7
-E	Robb_Stark	Brandon_Stark	5	7	12	14	18	20
-E	Robb_Stark	Tyrion_Lannister	7	9
-E	Robb_Stark	Stiv	12	14
-E	Robb_Stark	Jon_Umber	18	23
-E	Robb_Stark	Stark_guard_	19	21	36	38
-E	Robb_Stark	Lannister_scout_	19	21
-E	Robb_Stark	Jonos_Bracken	22	24
-E	Robb_Stark	Alton_Lannister	25	27	35	37
-E	Robb_Stark	Roose_Bolton	29	30	33	35	37	39	44	46
-E	Robb_Stark	Talisa_Maegyr	29	30	33	39	42	48	53	55	56	58	61	63
-E	Robb_Stark	Wounded_Lannister	29	30
-E	Robb_Stark	Rickard_Karstark	35	37	46	48	53	55
-E	Robb_Stark	Stark_messenger	36	38
-E	Robb_Stark	Septon	42	44
-E	Robb_Stark	Qyburn	44	46
-E	Robb_Stark	Brynden_Tully	48	50	55	57
-E	Robb_Stark	Edmure_Tully	48	50	53	57
-E	Robb_Stark	Karstark_lookout	53	55
-E	Robb_Stark	Walder_Rivers	55	57
-E	Robb_Stark	Lothar_Frey	55	57
-E	Robb_Stark	Walder_Frey	60	63
-E	Jon_Snow	Eddard_Stark	0	1	4	5
-E	Jon_Snow	Brandon_Stark	0	1
-E	Jon_Snow	Benjen_Stark	2	3	6	8
-E	Jon_Snow	Tyrion_Lannister	2	3	4	5	6	9
-E	Jon_Snow	Catelyn_Stark	3	4
-E	Jon_Snow	Arya_Stark	3	4
-E	Jon_Snow	Grenn	6	9	22	24	32	33	69	75	76	77	78	81
-E	Jon_Snow	Alliser_Thorne	7	11	65	67	68	72	75	77	78	80	82	84	92	94	95	97	98	99
-E	Jon_Snow	Samwell_Tarly	7	11	14	17	18	21	22	28	32	34	63	67	70	72	76	77	78	81	82	84	85	87	88	92	95	97	98	103
-E	Jon_Snow	Rast	9	11
-E	Jon_Snow	Pypar	9	11	15	17	19	21	22	24	63	65
-E	Jon_Snow	Jeor_Mormont	15	21	23	26	27	29	32	34
-E	Jon_Snow	Aemon	15	17	20	22	65	67	91	93
-E	Jon_Snow	Othell_Yarwyck	17	19	92	94
-E	Jon_Snow	Craster	24	26
-E	Jon_Snow	Eddison_Tollett	24	26	32	33	73	75	78	81	92	94	99	101
-E	Jon_Snow	Gilly	26	28
-E	Jon_Snow	Ygritte	33	37	43	46	48	50	52	59	60	61	63	65	79	81
-E	Jon_Snow	Qhorin	33	34	36	39
-E	Jon_Snow	Tormund	44	46	52	54	60	61	79	82	91	93	99	101
-E	Jon_Snow	Mance_Rayder	44	50	80	82	84	86
-E	Jon_Snow	Orell	52	54	56	58	60	61
-E	Jon_Snow	Janos_Slynt	65	67	75	77	78	80	88	90
-E	Jon_Snow	Olly	70	72	82	84	92	94
-E	Jon_Snow	Locke	70	74
-E	Jon_Snow	Morag	73	75
-E	Jon_Snow	Stannis_Baratheon	80	84	85	89	90	92	93	95
-E	Jon_Snow	Davos_Seaworth	80	84	85	89
-E	Jon_Snow	Melisandre	82	84	90	92
-E	Jon_Snow	Selyse_Baratheon	90	92
-E	Jon_Snow	Loboda	99	101
-E	Jon_Snow	Karsi	99	101
-E	Jon_Snow	Todder	99	101
-E	Jon_Snow	Lord_of_Bones	99	101
+LS	0	11
+N	Grenn	0	9
+N	Robb_Stark	0	7
+N	Varys	0	11
+N	Hot_Pie	2	5	7	8
+N	Stannis_Baratheon	2	11
+N	Eddard_Stark	0	3	4	5
+N	Pypar	0	3	6	8
+N	Catelyn_Stark	0	7
+N	Talisa_Maegyr	2	7
+N	Oberyn_Martell	6	8
+N	Ros	0	6
+N	Orell	4	7
+N	Rast	0	2	4	6	7	8
+N	Samwell_Tarly	0	11
+N	Margaery_Tyrell	2	10
+N	Thoros	4	6
+N	Daenerys_Targaryen	0	11
+N	Roose_Bolton	2	10
+N	Jaqen_H'ghar	2	5	8	11
+N	Meera_Reed	4	9
+N	Shae	2	8
+N	Yoren	0	3	4	5
+N	Eddison_Tollett	2	11
+N	Myrcella_Baratheon	0	1	2	3	9	11
+N	Brandon_Stark	0	9
+N	Olyvar	5	7	8	10
+N	Jojen_Reed	4	9
+N	Yara_Greyjoy	2	4	6	8
+N	Tyrion_Lannister	0	11
+N	Jeor_Mormont	0	6
+N	Drogo	0	3	4	5
+N	Selyse_Baratheon	5	11
+N	Hodor	0	9
+N	Olly	6	11
+N	Jaime_Lannister	0	11
+N	Davos_Seaworth	2	11
+N	Gendry	0	7
+N	Gilly	2	3	5	11
+N	Daario_Naharis	5	11
+N	Arya_Stark	0	11
+N	Myranda	5	8	9	11
+N	Pycelle	0	5	6	9
+N	Anguy	4	6
+N	Meryn_Trant	1	5	6	9	10	11
+N	Rodrik_Cassel	0	4
+N	Ellaria_Sand	6	11
+N	Rickard_Karstark	2	6
+N	Jorah_Mormont	0	8	9	11
+N	Shireen_Baratheon	5	7	8	11
+N	Petyr_Baelish	0	10
+N	Locke	4	8
+N	Joffrey_Baratheon	0	7
+N	Irri	0	4
+N	Mace_Tyrell	6	11
+N	Janos_Slynt	0	3	6	9
+N	Osha	1	7
+N	Barristan_Selmy	0	3	4	10
+N	Bronn	1	11
+N	Luwin	0	5
+N	Hizdahr_zo_Loraq	7	11
+N	Podrick_Payne	2	3	4	11
+N	Alliser_Thorne	0	2	6	10
+N	Ygritte	3	9
+N	Rickon_Stark	1	7
+N	Loras_Tyrell	1	7	8	10
+N	Jon_Snow	0	11
+N	Tywin_Lannister	1	9
+N	Cersei_Lannister	0	11
+N	Tommen_Baratheon	2	3	4	5	6	10
+N	Aemon	0	3	6	10
+N	Olenna_Tyrell	4	8	9	10
+N	Melisandre	2	11
+N	Tormund	4	11
+N	Kevan_Lannister	1	4	8	9
+N	Brienne_of_Tarth	2	11
+N	Sansa_Stark	0	11
+N	Lancel	0	5	8	10
+N	Viserys_Targaryen	0	2
+N	Theon_Greyjoy	0	8	9	11
+N	Qyburn	4	7	8	10
+N	Robert_Baratheon	0	2
+N	Missandei	4	11
+N	Ramsay_Bolton	4	11
+N	Sandor_Clegane	0	1	2	9
+N	Renly_Baratheon	0	4
+N	Grey_Worm	5	11
+E	Grenn	Rast	4	6
+E	Grenn	Olly	7	8
+E	Grenn	Eddison_Tollett	2	8
+E	Grenn	Alliser_Thorne	0	2	6	8
+E	Grenn	Samwell_Tarly	0	1	2	5	7	9
+E	Grenn	Locke	7	8
+E	Grenn	Janos_Slynt	7	8
+E	Grenn	Tyrion_Lannister	0	1
+E	Grenn	Pypar	0	1	2	3
+E	Grenn	Jon_Snow	0	1	2	4	6	9
+E	Robb_Stark	Rodrik_Cassel	0	3
+E	Robb_Stark	Talisa_Maegyr	2	7
+E	Robb_Stark	Rickard_Karstark	3	6
+E	Robb_Stark	Jaime_Lannister	2	3
+E	Robb_Stark	Roose_Bolton	2	5
+E	Robb_Stark	Theon_Greyjoy	0	3
+E	Robb_Stark	Qyburn	4	5
+E	Robb_Stark	Jon_Snow	0	1	4	5
+E	Robb_Stark	Brandon_Stark	0	2
+E	Robb_Stark	Luwin	0	2
+E	Robb_Stark	Tyrion_Lannister	0	1
+E	Robb_Stark	Catelyn_Stark	0	7
+E	Varys	Olenna_Tyrell	5	6
+E	Varys	Mace_Tyrell	7	8
+E	Varys	Janos_Slynt	0	1
+E	Varys	Oberyn_Martell	7	8
+E	Varys	Barristan_Selmy	1	3
+E	Varys	Bronn	3	4
+E	Varys	Sansa_Stark	1	3
+E	Varys	Renly_Baratheon	0	2
+E	Varys	Petyr_Baelish	0	3	5	6
+E	Varys	Robert_Baratheon	1	2
+E	Varys	Tywin_Lannister	4	5	7	8
+E	Varys	Cersei_Lannister	1	3	6	8
+E	Varys	Ros	4	6
+E	Varys	Joffrey_Baratheon	2	4	6	7
+E	Varys	Pycelle	1	3	7	8
+E	Varys	Shae	2	3	6	7
+E	Varys	Tyrion_Lannister	2	11
+E	Varys	Eddard_Stark	0	3
+E	Varys	Catelyn_Stark	0	1
+E	Hot_Pie	Brienne_of_Tarth	7	8
+E	Hot_Pie	Thoros	4	5
+E	Hot_Pie	Gendry	2	5
+E	Hot_Pie	Arya_Stark	2	5
+E	Hot_Pie	Podrick_Payne	7	8
+E	Stannis_Baratheon	Shireen_Baratheon	5	6	9	11
+E	Stannis_Baratheon	Renly_Baratheon	3	4
+E	Stannis_Baratheon	Jon_Snow	8	10
+E	Stannis_Baratheon	Samwell_Tarly	9	10
+E	Stannis_Baratheon	Brienne_of_Tarth	10	11
+E	Stannis_Baratheon	Selyse_Baratheon	5	7	9	10
+E	Stannis_Baratheon	Davos_Seaworth	2	11
+E	Stannis_Baratheon	Melisandre	2	7	9	11
+E	Stannis_Baratheon	Catelyn_Stark	3	4
 E	Eddard_Stark	Rodrik_Cassel	0	1
-E	Eddard_Stark	Catelyn_Stark	0	3	4	8
-E	Eddard_Stark	Brandon_Stark	0	1	45	47
-E	Eddard_Stark	Arya_Stark	1	2	5	7	8	10	11	15
-E	Eddard_Stark	Robert_Baratheon	1	2	3	6	10	16
-E	Eddard_Stark	Luwin	2	3
-E	Eddard_Stark	Benjen_Stark	2	3
-E	Eddard_Stark	Varys	5	7	8	10	11	13	14	21
-E	Eddard_Stark	Petyr_Baelish	5	7	8	10	11	18
-E	Eddard_Stark	Renly_Baratheon	5	7	15	17
-E	Eddard_Stark	Sansa_Stark	5	7	10	12	13	15
-E	Eddard_Stark	Royal_Steward	5	6	11	13	16	18
-E	Eddard_Stark	Pycelle	5	7	8	10	13	15
-E	Eddard_Stark	Mordane	5	7
-E	Eddard_Stark	Sandor_Clegane	5	6
-E	Eddard_Stark	Jory_Cassel	5	6	9	13
-E	Eddard_Stark	Janos_Slynt	8	10	16	18
-E	Eddard_Stark	Gendry	9	11
-E	Eddard_Stark	Tobho_Mott	9	11
-E	Eddard_Stark	Barristan_Selmy	10	12	14	16
-E	Eddard_Stark	Yoren	11	13
-E	Eddard_Stark	Mhaegen	12	14
-E	Eddard_Stark	Joss	13	15
-E	Eddard_Stark	Beric_Dondarrion	13	15
-E	Eddard_Stark	Tomard	15	17
-E	Eddard_Stark	Joffrey_Baratheon	16	18
-E	Brandon_Stark	Rodrik_Cassel	0	1	32	34
-E	Brandon_Stark	Catelyn_Stark	1	2	50	52
-E	Brandon_Stark	Nan	5	7
-E	Brandon_Stark	Tyrion_Lannister	7	9
-E	Brandon_Stark	Luwin	10	12	24	26	27	29	32	33	43	45
-E	Brandon_Stark	Osha	12	14	18	20	21	23	24	26	32	33	34	36	45	49	54	56	58	59	60	62
-E	Brandon_Stark	Stiv	12	14
-E	Brandon_Stark	Rickon_Stark	18	20	21	23	33	36	43	45	60	62
-E	Brandon_Stark	Hodor	18	20	45	47	54	56	60	64	72	75	80	82
-E	Brandon_Stark	Leadranach	24	26
-E	Brandon_Stark	Winterfell_shepher	32	33
-E	Brandon_Stark	Dagmer	33	34
-E	Brandon_Stark	Jojen_Reed	45	49	50	52	54	56	60	64	67	69	70	75	80	82
-E	Brandon_Stark	Meera_Reed	54	56	60	64	67	69	70	73	80	82
-E	Brandon_Stark	Samwell_Tarly	62	64
-E	Brandon_Stark	Rast	71	73
-E	Brandon_Stark	Karl_Tanner	71	74
-E	Brandon_Stark	Locke	72	74
-E	Brandon_Stark	Child_of_the_Forest	80	82
-E	Brandon_Stark	The_three-eyed_raven	80	82
-E	Sansa_Stark	Mordane	0	1	5	7	8	11	13	15	16	18
-E	Sansa_Stark	Arya_Stark	1	2	5	7	13	15	21	23
-E	Sansa_Stark	Robert_Baratheon	1	2	5	6
-E	Sansa_Stark	Catelyn_Stark	2	3
-E	Sansa_Stark	Mycah	5	6
-E	Sansa_Stark	Sandor_Clegane	5	6	34	36	41	43
-E	Sansa_Stark	Joffrey_Baratheon	5	6	13	15	19	25	29	30	33	34	39	41	59	60
-E	Sansa_Stark	Petyr_Baelish	9	12	17	21	42	44	45	47	54	56	67	73	76	78	83	86	87	89	90	92
-E	Sansa_Stark	Renly_Baratheon	10	12
-E	Sansa_Stark	Pycelle	17	21
-E	Sansa_Stark	Varys	19	21
-E	Sansa_Stark	Royal_Steward	19	21
-E	Sansa_Stark	Yoren	21	23
-E	Sansa_Stark	Tyrion_Lannister	23	25	29	30	39	41	56	58	59	60	61	63	64	66	67	69
-E	Sansa_Stark	Shae	28	30	33	37	39	42	45	48	56	58	64	66
-E	Sansa_Stark	Tommen_Baratheon	28	30
-E	Sansa_Stark	Olenna_Tyrell	46	48
-E	Sansa_Stark	Margaery_Tyrell	46	48	51	53	54	58	67	69
-E	Sansa_Stark	Loras_Tyrell	46	48	55	57
-E	Sansa_Stark	Podrick_Payne	61	63
-E	Sansa_Stark	Dontos_Hollard	65	69
-E	Sansa_Stark	Robin_Arryn	71	73	76	77
-E	Sansa_Stark	Lysa_Arryn	71	74	76	77
-E	Sansa_Stark	Anya_Waynwood	77	78
-E	Sansa_Stark	Yohn_Royce	77	78	82	84
-E	Sansa_Stark	Vance_Corbray	77	78
-E	Sansa_Stark	Inn_waitress	84	86
-E	Sansa_Stark	Brienne_of_Tarth	84	86
-E	Sansa_Stark	Roose_Bolton	87	89	92	94
-E	Sansa_Stark	Old_woman_	88	90	92	94
-E	Sansa_Stark	Ramsay_Bolton	92	94	95	99
-E	Sansa_Stark	Myranda	92	94	95	97	98	99	102	104
-E	Sansa_Stark	Walda_Bolton	92	94
-E	Mordane	Arya_Stark	5	7
-E	Mordane	Petyr_Baelish	9	11
-E	Rodrik_Cassel	Catelyn_Stark	4	7	10	12	21	23
-E	Rodrik_Cassel	Marillion	10	12
-E	Rodrik_Cassel	Bronn	10	12
-E	Rodrik_Cassel	Tyrion_Lannister	10	12
-E	Rodrik_Cassel	Jon_Umber	19	21
-E	Rodrik_Cassel	Lannister_scout_	19	21
-E	Rodrik_Cassel	Luwin	32	33
-E	Rodrik_Cassel	Hodor	32	33
-E	Catelyn_Stark	Robert_Baratheon	1	2
-E	Catelyn_Stark	Luwin	1	3	4	5
-E	Catelyn_Stark	Varys	5	7
-E	Catelyn_Stark	Petyr_Baelish	5	8	30	31
-E	Catelyn_Stark	Marillion	10	12
-E	Catelyn_Stark	Tyrion_Lannister	10	12	13	15
-E	Catelyn_Stark	Vardis_Egen	11	13
-E	Catelyn_Stark	Lysa_Arryn	11	13	17	19
-E	Catelyn_Stark	Robin_Arryn	17	19
-E	Catelyn_Stark	Jon_Umber	19	22
-E	Catelyn_Stark	Walder_Frey	19	21	61	63
-E	Catelyn_Stark	Margaery_Tyrell	27	29
-E	Catelyn_Stark	Renly_Baratheon	27	29	31	32
-E	Catelyn_Stark	Loras_Tyrell	27	29
-E	Catelyn_Stark	Colen_of_Greenpools	27	29
-E	Catelyn_Stark	Brienne_of_Tarth	27	29	31	33	36	38
-E	Catelyn_Stark	Stannis_Baratheon	30	31
-E	Catelyn_Stark	Emmon_Cuy	31	32
-E	Catelyn_Stark	Roose_Bolton	33	35	61	63
-E	Catelyn_Stark	Talisa_Maegyr	33	35	46	48	53	55	56	58
-E	Catelyn_Stark	Rickard_Karstark	36	38
-E	Catelyn_Stark	Jacks	36	38
-E	Catelyn_Stark	Brynden_Tully	48	50	56	58	61	63
-E	Catelyn_Stark	Edmure_Tully	53	58
-E	Arya_Stark	Robert_Baratheon	1	2
-E	Arya_Stark	Joffrey_Baratheon	5	6
-E	Arya_Stark	Syrio_Forel	7	9	12	14	16	18
-E	Arya_Stark	Petyr_Baelish	9	11	33	34
-E	Arya_Stark	Yoren	11	13	21	25	29	30
-E	Arya_Stark	Jory_Cassel	11	13
-E	Arya_Stark	Meryn_Trant	16	18
-E	Arya_Stark	Stableboy	17	19
-E	Arya_Stark	King's_Landing_baker	21	23
-E	Arya_Stark	King's_Landing_urchin	21	23
-E	Arya_Stark	Gendry	23	28	29	31	33	34	37	40	47	50	52	54
-E	Arya_Stark	Jaqen_H'ghar	25	27	32	35	37	39	43	45	84	89	93	95	98	104
-E	Arya_Stark	Rorge	25	27	37	39	74	76
-E	Arya_Stark	Hot_Pie	26	28	30	31	37	40	47	50
-E	Arya_Stark	Polliver	29	30	65	67
-E	Arya_Stark	Tywin_Lannister	30	31	32	36
-E	Arya_Stark	Old_Woman_Prisoner	30	31
-E	Arya_Stark	Tortured_prisoner	30	31
-E	Arya_Stark	Amory_Lorch	33	35
-E	Arya_Stark	Thoros	47	50	51	59
-E	Arya_Stark	Anguy	48	50	54	57
-E	Arya_Stark	Sandor_Clegane	51	54	58	59	60	61	63	70	71	78	81	83
-E	Arya_Stark	Beric_Dondarrion	52	59
-E	Arya_Stark	Farmer	67	70
-E	Arya_Stark	Dying_man	74	76
-E	Arya_Stark	Ternesio_Terys	81	83	84	86
-E	Arya_Stark	Brienne_of_Tarth	81	83
-E	Arya_Stark	The_Waif	87	89	93	95	102	104
-E	Arya_Stark	Joss	94	96
-E	Arya_Stark	Ghita	94	96
-E	Arya_Stark	The_thin_man	98	100
-E	Arya_Stark	Sailor	100	102
-E	Robert_Baratheon	Joffrey_Baratheon	5	6
-E	Robert_Baratheon	Lancel	6	8	10	12
-E	Robert_Baratheon	Barristan_Selmy	6	8	13	15
-E	Robert_Baratheon	Petyr_Baelish	9	11
-E	Robert_Baratheon	Jory_Cassel	9	11
-E	Robert_Baratheon	Varys	11	13
-E	Robert_Baratheon	Renly_Baratheon	13	15
-E	Luwin	Tyrion_Lannister	7	9
-E	Luwin	Osha	14	16	38	40	43	45
-E	Luwin	Leadranach	24	26
-E	Luwin	Lord_Portan	24	26
-E	Luwin	Hodor	27	29
-E	Luwin	Master_of_hounds	35	37
-E	Luwin	Dagmer	42	44
-E	Luwin	Rickon_Stark	43	45
-E	Ros	Tyrion_Lannister	1	2	37	39	49	51
-E	Ros	Petyr_Baelish	14	16	26	28
-E	Ros	Pycelle	23	25
-E	Ros	Janos_Slynt	25	27
-E	Ros	Daisy	25	27	29	30
-E	Ros	Marei	25	27
-E	Ros	Joffrey_Baratheon	29	30
-E	Ros	Varys	42	44	50	52
-E	Ros	Shae	45	47
-E	Tyrion_Lannister	Myrcella_Baratheon	3	4
-E	Tyrion_Lannister	Sandor_Clegane	3	4	33	35	40	42
-E	Tyrion_Lannister	Joffrey_Baratheon	3	4	23	25	29	30	33	35	38	42	59	60	61	63	66	69
-E	Tyrion_Lannister	Benjen_Stark	4	5	6	8
-E	Tyrion_Lannister	Alliser_Thorne	5	7
-E	Tyrion_Lannister	Jeor_Mormont	5	9
-E	Tyrion_Lannister	Rast	6	8
-E	Tyrion_Lannister	Yoren	6	8	47	49
-E	Tyrion_Lannister	Grenn	6	8
-E	Tyrion_Lannister	Aemon	7	9
-E	Tyrion_Lannister	Marillion	10	12
-E	Tyrion_Lannister	Bronn	10	13	17	25	26	30	31	33	37	41	44	46	49	51	57	59	64	66	67	69	75	77
-E	Tyrion_Lannister	Lysa_Arryn	11	15
-E	Tyrion_Lannister	Mord	12	15
-E	Tyrion_Lannister	Robin_Arryn	13	15
-E	Tyrion_Lannister	Vardis_Egen	13	15
-E	Tyrion_Lannister	Shagga	17	21
-E	Tyrion_Lannister	Tywin_Lannister	19	24	44	46	48	50	54	56	59	60	61	63	74	76	81	83
-E	Tyrion_Lannister	Kevan_Lannister	19	24
-E	Tyrion_Lannister	Shae	20	24	25	27	28	30	37	41	42	44	47	49	56	59	64	68	74	76
-E	Tyrion_Lannister	Leo_Lefford	22	24
-E	Tyrion_Lannister	Dontos_Hollard	23	25
-E	Tyrion_Lannister	Varys	25	30	37	41	42	44	50	52	66	68	74	76	82	87	88	91	102	104
-E	Tyrion_Lannister	Alton_Lannister	26	28
-E	Tyrion_Lannister	Janos_Slynt	26	28
-E	Tyrion_Lannister	Podrick_Payne	26	28	40	44	49	51	62	70
-E	Tyrion_Lannister	Pycelle	26	30	42	44	78	79
-E	Tyrion_Lannister	Petyr_Baelish	28	30	49	51
-E	Tyrion_Lannister	Meryn_Trant	29	30	33	35	74	76
-E	Tyrion_Lannister	Protestor	31	32
-E	Tyrion_Lannister	Lancel	31	32	39	42
-E	Tyrion_Lannister	Hallyne	32	33
-E	Tyrion_Lannister	Captain_of_the_Archers	39	41
-E	Tyrion_Lannister	Marei	49	51
-E	Tyrion_Lannister	Olenna_Tyrell	52	54	67	69
-E	Tyrion_Lannister	Oberyn_Martell	64	66	67	69	75	77	78	79
-E	Tyrion_Lannister	Blackmont	64	66
-E	Tyrion_Lannister	Red_Priestess	88	90
-E	Tyrion_Lannister	Clea	89	91
-E	Tyrion_Lannister	Jorah_Mormont	91	96	97	99	102	104
-E	Tyrion_Lannister	Malko	94	98
-E	Tyrion_Lannister	Yezzan_zo_Qaggaz	96	98
-E	Tyrion_Lannister	Daenerys_Targaryen	97	100	101	103
-E	Tyrion_Lannister	Fighting_pit_announcer	101	103
-E	Tyrion_Lannister	Daario_Naharis	101	104
-E	Tyrion_Lannister	Hizdahr_zo_Loraq	101	103
-E	Tyrion_Lannister	Missandei	102	104
-E	Tyrion_Lannister	Grey_Worm	102	104
-E	Viserys_Targaryen	Illyrio_Mopatis	1	3
-E	Viserys_Targaryen	Daenerys_Targaryen	1	2	8	11	14	16
-E	Viserys_Targaryen	Jorah_Mormont	3	4	6	8	13	16
-E	Viserys_Targaryen	Doreah	8	11
-E	Viserys_Targaryen	Drogo	14	16
-E	Illyrio_Mopatis	Daenerys_Targaryen	2	3
-E	Illyrio_Mopatis	Varys	11	13
-E	Daenerys_Targaryen	Jorah_Mormont	2	4	6	11	14	28	30	31	32	34	35	37	38	40	42	47	49	51	57	59	60	63	64	67	69	73	75	78	97	100
-E	Daenerys_Targaryen	Drogo	2	3	7	9	15	17	18	20	43	45
-E	Daenerys_Targaryen	Irri	4	5	6	8	9	11	26	28	32	33
-E	Daenerys_Targaryen	Doreah	4	6	9	11	24	26	32	33
-E	Daenerys_Targaryen	Rakharo	6	8	18	22	24	26
-E	Daenerys_Targaryen	Wineseller	15	17
-E	Daenerys_Targaryen	Mago	18	20
-E	Daenerys_Targaryen	Mirri_Maz_Duur	18	25
-E	Daenerys_Targaryen	Qotho	18	22
-E	Daenerys_Targaryen	The_Spice_King	30	31	33	37
-E	Daenerys_Targaryen	Kovarro	30	31	32	33
-E	Daenerys_Targaryen	Qartheen_woman	32	33
-E	Daenerys_Targaryen	Xaro_Xhoan_Daxos	32	36	43	45
-E	Daenerys_Targaryen	Pyat_Pree	32	33	35	37	43	45
-E	Daenerys_Targaryen	Silk_King	35	37
-E	Daenerys_Targaryen	Missandei	45	47	49	51	53	55	57	60	64	67	69	71	73	75	76	77	80	82	93	95
-E	Daenerys_Targaryen	Kraznys_mo_Nakloz	45	47	49	53
-E	Daenerys_Targaryen	Barristan_Selmy	45	47	49	51	57	59	64	67	69	73	82	84	85	87	91	93
-E	Daenerys_Targaryen	Greizhen_mo_Ullhor	49	51
-E	Daenerys_Targaryen	Grey_Worm	53	55	58	59	60	61	69	71	80	84	86	88
-E	Daenerys_Targaryen	Razdal_mo_Eraz	57	59
-E	Daenerys_Targaryen	Mero	58	59
-E	Daenerys_Targaryen	Prendahl_na_Ghezn	58	59
-E	Daenerys_Targaryen	Daario_Naharis	58	61	64	67	69	73	75	77	83	85	91	93	97	99	101	103
-E	Daenerys_Targaryen	Great_Master	73	75	91	93
-E	Daenerys_Targaryen	Hizdahr_zo_Loraq	73	75	83	87	91	95	97	99	101	103
-E	Daenerys_Targaryen	Fennesz	80	82
-E	Daenerys_Targaryen	Mossador	82	84	85	88
-E	Daenerys_Targaryen	Fighting_pit_announcer	101	103
-E	Jorah_Mormont	Drogo	2	3	20	22
-E	Jorah_Mormont	Rakharo	6	8	18	22
-E	Jorah_Mormont	Irri	6	8
-E	Jorah_Mormont	Wineseller	15	17
-E	Jorah_Mormont	Qotho	20	22
-E	Jorah_Mormont	Mirri_Maz_Duur	22	24
-E	Jorah_Mormont	Quaithe	32	33	35	37
-E	Jorah_Mormont	Kovarro	32	33	42	44
-E	Jorah_Mormont	Missandei	45	47
-E	Jorah_Mormont	Barristan_Selmy	45	47	49	51	53	55	57	59	60	61	65	67	69	73	77	78
-E	Jorah_Mormont	Mero	58	59
-E	Jorah_Mormont	Daario_Naharis	60	62	71	73	102	104
-E	Jorah_Mormont	Malko	94	96
-E	Jorah_Mormont	Yezzan_zo_Qaggaz	98	100
-E	Jorah_Mormont	Fighting_pit_announcer	101	103
-E	Drogo	Mago	18	20
-E	Drogo	Qotho	20	22
-E	Benjen_Stark	Yoren	6	8
-E	Myrcella_Baratheon	Joffrey_Baratheon	23	25
-E	Myrcella_Baratheon	Nymeria_Sand	94	96
-E	Myrcella_Baratheon	Trystane_Martell	94	96
-E	Jhiqui	Irri	3	5
-E	Jhiqui	Doreah	4	5
-E	Irri	Doreah	4	5	32	33
-E	Irri	Rakharo	6	8
-E	Irri	Qotho	20	22
-E	Sandor_Clegane	Joffrey_Baratheon	5	6	22	25	29	30	33	35	39	42
-E	Sandor_Clegane	Bronn	38	40
-E	Sandor_Clegane	Baratheon_officer	40	42
-E	Sandor_Clegane	Captain_of_the_Archers	40	42
-E	Sandor_Clegane	Podrick_Payne	40	42	81	83
-E	Sandor_Clegane	Thoros	47	49	51	54
-E	Sandor_Clegane	Anguy	48	50	51	54
-E	Sandor_Clegane	Beric_Dondarrion	51	53
-E	Sandor_Clegane	Hog_farmer	60	61
-E	Sandor_Clegane	Frey_Guard	61	63
-E	Sandor_Clegane	Polliver	65	67
-E	Sandor_Clegane	Farmer	67	70
-E	Sandor_Clegane	Rorge	74	76
-E	Sandor_Clegane	Dying_man	74	76
-E	Sandor_Clegane	Donnel_Waynwood	77	78
-E	Sandor_Clegane	Brienne_of_Tarth	81	83
-E	Joffrey_Baratheon	Mycah	5	6
-E	Joffrey_Baratheon	Pycelle	19	23	42	44	61	63	66	68
-E	Joffrey_Baratheon	Barristan_Selmy	19	21
-E	Joffrey_Baratheon	Royal_Steward	19	21
-E	Joffrey_Baratheon	Marillion	21	23
-E	Joffrey_Baratheon	Varys	23	25	38	40	61	63
-E	Joffrey_Baratheon	Dontos_Hollard	23	25
-E	Joffrey_Baratheon	Melee_Herald	23	25
-E	Joffrey_Baratheon	Daisy	29	30
-E	Joffrey_Baratheon	Lancel	29	30	39	42
-E	Joffrey_Baratheon	Captain_of_the_Archers	40	42
-E	Joffrey_Baratheon	Margaery_Tyrell	42	44	45	49	50	52	67	69
-E	Joffrey_Baratheon	Petyr_Baelish	42	44
-E	Joffrey_Baratheon	Loras_Tyrell	42	44
-E	Joffrey_Baratheon	Margaery's_handmaiden	45	47
-E	Joffrey_Baratheon	Orphan_kid	45	47
-E	Joffrey_Baratheon	Meryn_Trant	45	47
-E	Joffrey_Baratheon	King's_Landing_tailor	46	48
-E	Joffrey_Baratheon	Olenna_Tyrell	50	52
-E	Joffrey_Baratheon	Tywin_Lannister	57	60	61	63
-E	Joffrey_Baratheon	Mace_Tyrell	66	68
-E	Joffrey_Baratheon	Oberyn_Martell	67	69
-E	Joffrey_Baratheon	Brienne_of_Tarth	67	69
-E	Joffrey_Baratheon	The_High_Septon	67	69
-E	Doreah	Xaro_Xhoan_Daxos	43	45
-E	Varys	Petyr_Baelish	5	7	8	10	11	13	23	25	26	28	56	58
-E	Varys	Renly_Baratheon	5	7	8	10	11	13
-E	Varys	Janos_Slynt	8	10
-E	Varys	Pycelle	11	13	17	21	24	26	71	73	74	76
-E	Varys	Barristan_Selmy	14	16	19	21
-E	Varys	Shae	25	27	62	64
-E	Varys	Bronn	37	39
-E	Varys	Tywin_Lannister	48	50	74	76
-E	Varys	Olenna_Tyrell	51	53
-E	Varys	Oberyn_Martell	74	76
-E	Varys	Great_Master	74	76
-E	Varys	Mace_Tyrell	74	76
-E	Varys	Red_Priestess	88	90
-E	Varys	Whore_(Mother_of_Dragons)	89	91
-E	Petyr_Baelish	Renly_Baratheon	5	7	10	13	29	30
-E	Petyr_Baelish	Pycelle	5	7	13	15	24	26	48	50
-E	Petyr_Baelish	Gregor_Clegane	10	12
-E	Petyr_Baelish	Joss	13	15
-E	Petyr_Baelish	Janos_Slynt	24	26
-E	Petyr_Baelish	Ros'_customer	26	28
-E	Petyr_Baelish	Bronn	28	30
-E	Petyr_Baelish	Margaery_Tyrell	30	32	69	71
-E	Petyr_Baelish	Loras_Tyrell	31	32
-E	Petyr_Baelish	Tywin_Lannister	33	34
-E	Petyr_Baelish	Olyvar	54	56
-E	Petyr_Baelish	Dontos_Hollard	67	69
-E	Petyr_Baelish	Robin_Arryn	71	73	77	78
-E	Petyr_Baelish	Donnel_Waynwood	71	73
-E	Petyr_Baelish	Lysa_Arryn	71	73	76	77
-E	Petyr_Baelish	Anya_Waynwood	77	78
-E	Petyr_Baelish	Yohn_Royce	77	78	82	84
-E	Petyr_Baelish	Brienne_of_Tarth	84	86
-E	Petyr_Baelish	Roose_Bolton	88	90
-E	Petyr_Baelish	Ramsay_Bolton	88	90
-E	Petyr_Baelish	Lancel	94	96
-E	Petyr_Baelish	Olenna_Tyrell	97	99
-E	Renly_Baratheon	Pycelle	5	7	11	13
-E	Renly_Baratheon	Janos_Slynt	8	10
-E	Renly_Baratheon	Loras_Tyrell	12	14	27	30
-E	Renly_Baratheon	Margaery_Tyrell	27	30
-E	Renly_Baratheon	Gerald	27	29
-E	Renly_Baratheon	Brienne_of_Tarth	27	29
-E	Renly_Baratheon	Melisandre	30	31
-E	Renly_Baratheon	Stannis_Baratheon	30	31
-E	Alliser_Thorne	Rast	7	9
-E	Alliser_Thorne	Grenn	7	11	69	71	75	77
-E	Alliser_Thorne	Samwell_Tarly	7	11	15	17
-E	Alliser_Thorne	Pypar	7	9
-E	Alliser_Thorne	Aemon	65	67
-E	Alliser_Thorne	Night's_Watch_Officer	68	70
-E	Alliser_Thorne	Eddison_Tollett	69	71	78	80
-E	Alliser_Thorne	Janos_Slynt	70	72	78	80
-E	Alliser_Thorne	Locke	70	72
-E	Alliser_Thorne	Othell_Yarwyck	75	77
-E	Alliser_Thorne	Bowen_Marsh	92	94
-E	Pycelle	Joss	13	15
-E	Pycelle	Timett	29	30
-E	Pycelle	Tywin_Lannister	74	76
-E	Pycelle	Oberyn_Martell	74	76
-E	Pycelle	Qyburn	80	82	88	90
-E	Pycelle	Lancel	83	85
-E	Jeor_Mormont	Aemon	7	9
-E	Jeor_Mormont	Samwell_Tarly	15	17	47	49
-E	Jeor_Mormont	Othell_Yarwyck	17	19
-E	Jeor_Mormont	Craster	24	26	27	29	48	50	51	53
-E	Jeor_Mormont	Qhorin	33	34
-E	Jeor_Mormont	Rast	47	49	51	53
-E	Jeor_Mormont	Eddison_Tollett	51	53
-E	Jeor_Mormont	Karl_Tanner	51	53
-E	Jory_Cassel	Hugh	8	10
-E	Rast	Samwell_Tarly	7	9	51	53
-E	Rast	Grenn	47	49	50	53
-E	Rast	Craster	48	50	51	53
-E	Rast	Eddison_Tollett	50	52
-E	Rast	Karl_Tanner	70	73
-E	Rakharo	Wineseller	15	17
-E	Barristan_Selmy	Daario_Naharis	58	59	60	61	85	87
-E	Barristan_Selmy	Missandei	69	71
-E	Barristan_Selmy	Little_Bird	77	78
-E	Barristan_Selmy	Mossador	82	84	85	87
-E	Barristan_Selmy	Hizdahr_zo_Loraq	85	87
-E	Barristan_Selmy	Grey_Worm	86	88
-E	Yoren	Marillion	10	12
-E	Yoren	Gendry	23	25	29	30
-E	Yoren	Amory_Lorch	29	30
-E	Lancel	Shae	40	42
-E	Lancel	Olyvar	88	90
-E	Lancel	The_High_Septon	88	90
-E	Lancel	Loras_Tyrell	89	91
-E	Grenn	Pypar	6	9	22	24
-E	Grenn	Samwell_Tarly	7	9	22	28	32	33	37	39	43	45	47	49	76	77	79	81
-E	Grenn	Eddison_Tollett	24	28	37	39	43	45	47	49	50	52	69	71	76	77
-E	Grenn	Olly	70	72
-E	Grenn	Locke	72	74
-E	Grenn	Janos_Slynt	78	80
-E	Grenn	Donnel_Hill	79	81
-E	Pypar	Samwell_Tarly	15	17	18	21	63	65	76	77	78	80
-E	Pypar	Aemon	68	70
-E	Pypar	Eddison_Tollett	76	77
-E	Pypar	Gilly	78	79
-E	Samwell_Tarly	Othell_Yarwyck	17	19
-E	Samwell_Tarly	Aemon	20	22	63	65	78	79	85	87	91	93	96	98
-E	Samwell_Tarly	Eddison_Tollett	24	28	32	33	37	39	43	45	47	49	76	77
-E	Samwell_Tarly	Gilly	27	29	50	53	54	56	60	61	62	65	68	70	78	79	82	84	85	87	92	94	96	98	99	101
-E	Samwell_Tarly	Qhorin	33	34
-E	Samwell_Tarly	Meera_Reed	62	64
-E	Samwell_Tarly	Jojen_Reed	62	64
-E	Samwell_Tarly	Hodor	62	64
-E	Samwell_Tarly	Janos_Slynt	68	70	85	87
-E	Samwell_Tarly	Mole's_Town_madam	68	70
-E	Samwell_Tarly	Locke	70	72
-E	Samwell_Tarly	Selyse_Baratheon	85	87
-E	Samwell_Tarly	Shireen_Baratheon	85	87
-E	Samwell_Tarly	Bowen_Marsh	92	94
-E	Samwell_Tarly	Stannis_Baratheon	92	94
-E	Samwell_Tarly	Brant	96	98
-E	Samwell_Tarly	Olly	99	101
-E	Syrio_Forel	Meryn_Trant	16	18
-E	Syrio_Forel	Lannister_guardsman_	16	18
-E	Aemon	Gilly	63	65	96	98
-E	Aemon	Janos_Slynt	65	67	85	87
-E	Aemon	Othell_Yarwyck	68	70
-E	Aemon	Mallister_supporter	85	87
-E	Hodor	Osha	34	36	58	59	60	62
-E	Hodor	Jojen_Reed	58	59	60	62
-E	Hodor	Old_Man	60	62
-E	Hodor	Meera_Reed	71	73
-E	Hodor	Locke	72	74
-E	Janos_Slynt	Tobho_Mott	25	27
-E	Janos_Slynt	Mhaegen	25	27
-E	Janos_Slynt	Bronn	26	28	75	77
-E	Janos_Slynt	Mallister_supporter	85	87
-E	Janos_Slynt	Eddison_Tollett	88	90
-E	Gendry	Tobho_Mott	9	11
-E	Gendry	Rorge	25	27
-E	Gendry	Hot_Pie	26	28	30	31	38	40	48	50
-E	Gendry	Tywin_Lannister	30	31
-E	Gendry	Old_Woman_Prisoner	30	31
-E	Gendry	The_Tickler	30	31
-E	Gendry	Polliver	30	31
-E	Gendry	Thoros	47	50	51	54	55	57
-E	Gendry	Anguy	55	57
-E	Gendry	Melisandre	57	60
-E	Gendry	Davos_Seaworth	62	65
-E	Gregor_Clegane	Tywin_Lannister	30	31	34	36
-E	Gregor_Clegane	Polliver	30	31
-E	Gregor_Clegane	Oberyn_Martell	78	79
-E	Bronn	Lysa_Arryn	13	15
-E	Bronn	Shae	20	22
-E	Bronn	Meryn_Trant	29	30	44	46
-E	Bronn	Hallyne	32	33
-E	Bronn	Singing_Lannister_soldier	38	40
-E	Bronn	Armeca	38	40
-E	Bronn	Podrick_Payne	44	46	64	66
-E	Bronn	Mirelle	44	46
-E	Bronn	Oberyn_Martell	64	66
-E	Bronn	Lollys_Stokeworth	84	86
-E	Bronn	Lead_Dornish_guard	90	92
-E	Bronn	Trystane_Martell	94	96
-E	Bronn	Nymeria_Sand	97	99
-E	Bronn	Obara_Sand	97	99
-E	Bronn	Tyene_Sand	97	99	100	104
-E	Bronn	Areo_Hotah	100	102
-E	Robin_Arryn	Lysa_Arryn	11	15	17	19
-E	Robin_Arryn	Eon_Hunter	13	15
-E	Lysa_Arryn	Vardis_Egen	13	15
-E	Vardis_Egen	Eon_Hunter	13	15
-E	Loras_Tyrell	Brienne_of_Tarth	27	29
-E	Loras_Tyrell	Margaery_Tyrell	31	32	45	48	83	85
-E	Loras_Tyrell	Olyvar	54	56	83	85	95	97	98	99
-E	Loras_Tyrell	High_Sparrow	95	97	98	99
-E	Osha	Stiv	12	14
-E	Osha	Wallen	12	14
-E	Osha	Rickon_Stark	21	23	34	36	60	62
-E	Osha	Drennan	33	35
-E	Osha	Meera_Reed	47	49	54	56	58	59	60	62
-E	Osha	Jojen_Reed	47	49	58	59
-E	Beric_Dondarrion	Thoros	53	59
-E	Beric_Dondarrion	Melisandre	55	57
-E	Beric_Dondarrion	Anguy	57	59
-E	Tywin_Lannister	Lannister_messenger_	19	21
-E	Tywin_Lannister	Shagga	19	21
-E	Tywin_Lannister	Kevan_Lannister	19	22	37	39
-E	Tywin_Lannister	Polliver	30	31
-E	Tywin_Lannister	Amory_Lorch	32	34
-E	Tywin_Lannister	Reginald_Lannister	32	33
-E	Tywin_Lannister	Lannister_Captain	33	34
-E	Tywin_Lannister	Olenna_Tyrell	55	57	67	69
-E	Tywin_Lannister	Oberyn_Martell	67	70	74	76
-E	Tywin_Lannister	Tommen_Baratheon	67	69
-E	Tywin_Lannister	Ellaria_Sand	68	70
-E	Tywin_Lannister	The_High_Septon	71	73
-E	Tywin_Lannister	Meryn_Trant	74	76
-E	Tywin_Lannister	Shae	74	76
-E	Tywin_Lannister	Mace_Tyrell	74	76
-E	Meryn_Trant	Braavosi_Madam	100	102
-E	Othell_Yarwyck	Night's_Watch_messenger	17	19
-E	Jon_Umber	Stark_guard_	19	21
-E	Jon_Umber	Jonos_Bracken	22	24
-E	Rickon_Stark	Meera_Reed	54	56
-E	Rickon_Stark	Jojen_Reed	60	61
-E	Mirri_Maz_Duur	Qotho	18	22
-E	Kevan_Lannister	Leo_Lefford	22	24
-E	Kevan_Lannister	Addam_Marbrand	22	24
-E	Stevron_Frey	Walder_Frey	19	21
-E	Walder_Frey	Ryger_Rivers	19	21
-E	Walder_Frey	Merry_Frey	60	61
-E	Walder_Frey	Talisa_Maegyr	61	63
-E	Walder_Frey	Roose_Bolton	62	64
-E	Shae	Handmaiden	35	37
-E	Shae	Oberyn_Martell	74	76
-E	Shae	Mace_Tyrell	74	76
-E	Rickard_Karstark	Roose_Bolton	35	37	44	46
-E	Rickard_Karstark	Brienne_of_Tarth	36	38
-E	Rickard_Karstark	Martyn_Lannister	53	55
-E	Rickard_Karstark	Willem_Lannister	53	55
-E	Leo_Lefford	Addam_Marbrand	22	24
-E	Dontos_Hollard	Melee_Herald	23	25
-E	Hot_Pie	Lommy	23	25	26	28
-E	Hot_Pie	Amory_Lorch	29	30
-E	Hot_Pie	Polliver	29	30
-E	Hot_Pie	Thoros	47	49
-E	Hot_Pie	Podrick_Payne	75	77
-E	Hot_Pie	Brienne_of_Tarth	75	77
-E	Lommy	Polliver	29	30
-E	Cressen	Melisandre	24	26
-E	Cressen	Stannis_Baratheon	24	26
-E	Cressen	Davos_Seaworth	24	26
-E	Melisandre	Stannis_Baratheon	24	26	27	29	30	31	42	44	49	51	59	60	63	65	90	92	96	98	101	103
-E	Melisandre	Davos_Seaworth	24	26	31	32	45	47	63	65
-E	Melisandre	Anguy	54	56
-E	Melisandre	Thoros	54	57
-E	Melisandre	Axell_Florent	66	68
-E	Melisandre	Selyse_Baratheon	66	68	75	77	90	92	101	103
-E	Melisandre	Shireen_Baratheon	66	68	101	103
-E	Stannis_Baratheon	Matthos_Seaworth	24	26
-E	Stannis_Baratheon	Davos_Seaworth	24	26	27	29	31	32	38	40	45	47	59	60	63	65	66	70	73	75	82	84	92	95	96	98	99	101
-E	Stannis_Baratheon	Baratheon_officer	40	42
-E	Stannis_Baratheon	Selyse_Baratheon	53	55	66	68	90	92
-E	Stannis_Baratheon	Shireen_Baratheon	53	55	90	92	100	103
-E	Stannis_Baratheon	Tycho_Nestoris	73	75
-E	Stannis_Baratheon	Mance_Rayder	80	82
-E	Stannis_Baratheon	Brienne_of_Tarth	101	103
-E	Stannis_Baratheon	Baratheon_General	101	103
-E	Davos_Seaworth	Matthos_Seaworth	27	29	38	41
-E	Davos_Seaworth	Salladhor_Saan	27	29	44	46	73	75
-E	Davos_Seaworth	Boat_commander	44	46
-E	Davos_Seaworth	Shireen_Baratheon	53	55	63	65	68	70	93	95	99	101
-E	Davos_Seaworth	Tycho_Nestoris	73	75
-E	Davos_Seaworth	Mance_Rayder	80	82
-E	Davos_Seaworth	Olly	87	89
-E	Davos_Seaworth	Selyse_Baratheon	93	95
-E	Craster	Gilly	24	26
-E	Craster	Karl_Tanner	51	53
-E	Gilly	Meera_Reed	62	64
-E	Gilly	Mole's_Town_whore	68	70	76	77
-E	Gilly	Shireen_Baratheon	85	87
-E	Gilly	Derek	96	98
-E	Gilly	Olly	99	101
-E	Matthos_Seaworth	Salladhor_Saan	27	29
-E	Eddison_Tollett	Locke	72	74
-E	Jaqen_H'ghar	Rorge	25	27	29	30
-E	Jaqen_H'ghar	Despondent_man	86	88
-E	Jaqen_H'ghar	The_Waif	87	89	98	100	102	104
-E	Alton_Lannister	Torrhen_Karstark	35	37
-E	Marei	Oberyn_Martell	64	66
-E	Balon_Greyjoy	Yara_Greyjoy	26	30	62	64
-E	Yara_Greyjoy	Myranda	73	75
-E	Yara_Greyjoy	Ramsay_Bolton	73	75
-E	Yara_Greyjoy	Bolton_guard	73	75
-E	Yara_Greyjoy	Ironborn_in_skiff	73	75
-E	Yara_Greyjoy	First_Mate	73	75
-E	Podrick_Payne	Olenna_Tyrell	52	54
-E	Podrick_Payne	Brienne_of_Tarth	72	74	75	77	81	86	87	89	92	94	101	103
-E	Podrick_Payne	Inn_waitress	84	86
-E	Margaery_Tyrell	Margaery's_handmaiden	45	47
-E	Margaery_Tyrell	Orphan_kid	45	47
-E	Margaery_Tyrell	Olenna_Tyrell	46	48	65	71	95	97	98	99
-E	Margaery_Tyrell	Brienne_of_Tarth	65	69
-E	Margaery_Tyrell	Tommen_Baratheon	70	72	86	88	90	92
-E	Margaery_Tyrell	Olyvar	83	85
-E	Margaery_Tyrell	High_Sparrow	95	97	98	99
-E	Brienne_of_Tarth	Emmon_Cuy	31	32
-E	Brienne_of_Tarth	Jacks	36	38
-E	Brienne_of_Tarth	Tom	42	44
-E	Brienne_of_Tarth	Riverlands_traveller	46	48
-E	Brienne_of_Tarth	Locke	50	52
-E	Brienne_of_Tarth	Roose_Bolton	52	54	55	57
-E	Brienne_of_Tarth	Olenna_Tyrell	65	67
-E	Brienne_of_Tarth	Eyrie_Guard	84	86
-E	Brienne_of_Tarth	Winter_town_man	92	94
-E	Salladhor_Saan	Lhara	73	75
-E	Tommen_Baratheon	Lead_Kingsguard	90	92
-E	Roose_Bolton	Wounded_Lannister	29	30
-E	Roose_Bolton	Talisa_Maegyr	37	39	46	48
-E	Roose_Bolton	Locke	52	54	66	68
-E	Roose_Bolton	Brynden_Tully	61	63
-E	Roose_Bolton	Ramsay_Bolton	62	64	66	68	77	78	87	90	92	94	98	100
-E	Roose_Bolton	Walda_Bolton	66	68	92	94
-E	Wounded_Lannister	Talisa_Maegyr	29	30
-E	Amory_Lorch	Polliver	29	30
-E	Polliver	Innkeeper	65	67
-E	Talisa_Maegyr	Qyburn	44	46
-E	Talisa_Maegyr	Martyn_Lannister	48	50
-E	Talisa_Maegyr	Brynden_Tully	56	58
-E	Talisa_Maegyr	Lothar_Frey	61	63
-E	The_Tickler	Tortured_prisoner	30	31
-E	The_Spice_King	Xaro_Xhoan_Daxos	30	31	33	37
-E	The_Spice_King	Pyat_Pree	35	37
-E	Xaro_Xhoan_Daxos	Pyat_Pree	35	37
-E	Dagmer	Winterfell_Farmer	35	37
-E	Dagmer	Lorren	42	44
-E	Ygritte	Qhorin	33	34
-E	Ygritte	Lord_of_Bones	36	38
-E	Ygritte	Tormund	44	46	55	57	60	62	65	67	78	79
-E	Ygritte	Mance_Rayder	46	48
-E	Ygritte	Orell	48	50	52	54	56	58	60	62
-E	Ygritte	Styr	65	67	78	80
-E	Qhorin	Lord_of_Bones	43	45
-E	Lord_of_Bones	Tormund	44	46	99	101
-E	Tom	Stark_soldier_	42	44
-E	Tormund	Mance_Rayder	44	46	48	50
-E	Tormund	Orell	54	57	60	62
-E	Tormund	Old_Man	60	62
-E	Tormund	Styr	65	67
-E	Tormund	Wildling_elder	99	101
-E	Tormund	Loboda	99	101
-E	Tormund	Karsi	99	101
-E	Qyburn	The_High_Septon	88	90
-E	Mance_Rayder	Orell	46	50
-E	Missandei	Kraznys_mo_Nakloz	45	47	49	53
-E	Missandei	Greizhen_mo_Ullhor	49	51
-E	Missandei	Daario_Naharis	65	67	102	104
-E	Missandei	Grey_Worm	69	71	76	77	82	84	93	95	102	104
-E	Missandei	Fennesz	80	82
-E	Missandei	Goatherd	80	82
-E	Kraznys_mo_Nakloz	Unsullied_	45	47
-E	Jojen_Reed	Meera_Reed	47	49	60	64	67	69	70	74	80	82
-E	Jojen_Reed	Old_Man	60	62
-E	Jojen_Reed	Karl_Tanner	72	74
-E	Jojen_Reed	Child_of_the_Forest	80	82
-E	Olenna_Tyrell	Tyrell_servant	46	48
-E	Olenna_Tyrell	Tyrell_lady	51	53
-E	Olenna_Tyrell	Musician_	67	69
-E	Olenna_Tyrell	High_Sparrow	95	99
-E	Riverlands_traveller	Locke	47	49
-E	Anguy	Thoros	47	49	51	53
-E	Ramsay_Bolton	Myranda	66	68	92	94
-E	Ramsay_Bolton	Tansy	66	68
-E	Ramsay_Bolton	Walda_Bolton	92	94
-E	Ramsay_Bolton	Baratheon_soldier_	101	103
-E	Meera_Reed	Old_Man	60	62
-E	Meera_Reed	Karl_Tanner	71	73
-E	Meera_Reed	The_three-eyed_raven	80	82
-E	Locke	Walton	58	59
-E	Brynden_Tully	Edmure_Tully	48	50	55	58
-E	Brynden_Tully	Walder_Rivers	55	57
-E	Brynden_Tully	Lothar_Frey	55	57
-E	Edmure_Tully	Walder_Rivers	55	57
-E	Edmure_Tully	Lothar_Frey	55	57
-E	Edmure_Tully	Roslin_Tully	60	62
-E	Martyn_Lannister	Willem_Lannister	53	55
-E	Karl_Tanner	Craster's_wife	70	72
-E	Selyse_Baratheon	Axell_Florent	66	68
-E	Selyse_Baratheon	Shireen_Baratheon	85	87	101	103
-E	Grey_Worm	Mero	58	59
-E	Grey_Worm	Daario_Naharis	64	66	85	87	102	104
-E	Grey_Worm	Elder_slave	69	71
-E	Olyvar	Ellaria_Sand	64	66	68	70
-E	Olyvar	Oberyn_Martell	64	66	68	70
-E	Olyvar	The_High_Septon	88	90
-E	Olyvar	High_Sparrow	95	97	98	99
-E	Walder_Rivers	Lothar_Frey	55	57
-E	Myranda	Violet	58	59
-E	Myranda	Tansy	66	68
-E	Mero	Prendahl_na_Ghezn	59	60
-E	Mero	Daario_Naharis	59	60
-E	Prendahl_na_Ghezn	Daario_Naharis	59	60
-E	Daario_Naharis	Hizdahr_zo_Loraq	83	85	86	88	101	103
-E	Ellaria_Sand	Oberyn_Martell	64	66	67	70	78	79
-E	Ellaria_Sand	Morgan	64	66
-E	Ellaria_Sand	Areo_Hotah	85	87
-E	Ellaria_Sand	Doran_Martell	85	87	100	102
-E	Ellaria_Sand	Nymeria_Sand	91	93
-E	Ellaria_Sand	Obara_Sand	91	93
-E	Ellaria_Sand	Tyene_Sand	91	93
-E	Ellaria_Sand	Trystane_Martell	100	102
-E	Oberyn_Martell	Morgan's_friend	64	66
-E	Oberyn_Martell	Morgan	64	66
-E	Oberyn_Martell	Mace_Tyrell	74	76
-E	Styr	Olly	68	70
-E	Mace_Tyrell	The_High_Septon	88	90
-E	Mace_Tyrell	Tycho_Nestoris	100	102
-E	Olly	Guymon	68	70
-E	Guymon	Olly's_mother	68	70
-E	Mole's_Town_whore	Kegs	76	77
-E	Mossador	Valyrian_slave	69	71
-E	Mossador	Elder_slave	69	71
-E	Mossador	Hizdahr_zo_Loraq	85	87
-E	Valyrian_slave	Elder_slave	69	71
-E	Tycho_Nestoris	The_thin_man	100	102
-E	Lhara	Brusco	100	102
-E	Kegs	Jack_Bulwer	76	77
-E	Anya_Waynwood	Yohn_Royce	77	78
-E	Yohn_Royce	Vance_Corbray	77	78
-E	Yohn_Royce	Helliweg	82	84
-E	Yohn_Royce	Samwell_Stone	82	84
-E	Donnel_Hill	Cooper	79	81
-E	Maggy	Melara_Hethersoon	81	83
-E	Helliweg	Samwell_Stone	82	84
-E	Areo_Hotah	Doran_Martell	94	96
-E	Areo_Hotah	Obara_Sand	94	96
-E	Boake	Lead_Kingsguard	90	92
-E	Nymeria_Sand	Obara_Sand	94	96
-E	Nymeria_Sand	Tyene_Sand	97	99	100	102
-E	Malko	Slaver_	94	96
-E	Malko	Yezzan_zo_Qaggaz	96	98
-E	Brant	Derek	96	98
-E	Braavosi_Captain	The_thin_man	98	100
-E	Wildling_elder	Wun_Weg_Wun_Dar_Wun	99	101
-E	Wun_Weg_Wun_Dar_Wun	Loboda	99	101
-E	Loboda	Karsi	99	101
-E	Karsi	Johnna's_sister	99	101
-E	Strong_Fighter	Pit_Fighter_	101	103
-E	Pit_Fighter_	Fighting_pit_announcer	101	103
+E	Eddard_Stark	Yoren	1	2
+E	Eddard_Stark	Janos_Slynt	0	2
+E	Eddard_Stark	Sandor_Clegane	0	1
+E	Eddard_Stark	Barristan_Selmy	1	2
+E	Eddard_Stark	Jaime_Lannister	0	2
+E	Eddard_Stark	Sansa_Stark	0	2
+E	Eddard_Stark	Renly_Baratheon	0	2
+E	Eddard_Stark	Theon_Greyjoy	0	1
+E	Eddard_Stark	Petyr_Baelish	0	2
+E	Eddard_Stark	Robert_Baratheon	0	2
+E	Eddard_Stark	Jon_Snow	0	1
+E	Eddard_Stark	Arya_Stark	0	2
+E	Eddard_Stark	Brandon_Stark	0	1	4	5
+E	Eddard_Stark	Joffrey_Baratheon	1	2
+E	Eddard_Stark	Cersei_Lannister	0	2
+E	Eddard_Stark	Pycelle	0	2
+E	Eddard_Stark	Luwin	0	1
+E	Eddard_Stark	Gendry	0	2
+E	Eddard_Stark	Catelyn_Stark	0	1
+E	Pypar	Jon_Snow	0	3	6	7
+E	Pypar	Aemon	6	7
+E	Pypar	Samwell_Tarly	1	3	6	8
+E	Pypar	Gilly	7	8
+E	Pypar	Eddison_Tollett	7	8
+E	Pypar	Alliser_Thorne	0	1
+E	Catelyn_Stark	Rodrik_Cassel	0	3
+E	Catelyn_Stark	Margaery_Tyrell	2	3
+E	Catelyn_Stark	Rickard_Karstark	3	4
+E	Catelyn_Stark	Talisa_Maegyr	3	6
+E	Catelyn_Stark	Petyr_Baelish	0	1	3	4
+E	Catelyn_Stark	Jon_Snow	0	1
+E	Catelyn_Stark	Tyrion_Lannister	1	2
+E	Catelyn_Stark	Loras_Tyrell	2	3
+E	Catelyn_Stark	Brienne_of_Tarth	2	4
+E	Catelyn_Stark	Jaime_Lannister	2	4
+E	Catelyn_Stark	Sansa_Stark	0	1
+E	Catelyn_Stark	Roose_Bolton	3	4	6	7
+E	Catelyn_Stark	Theon_Greyjoy	0	3
+E	Catelyn_Stark	Robert_Baratheon	0	1
+E	Catelyn_Stark	Brandon_Stark	0	1	5	6
+E	Catelyn_Stark	Cersei_Lannister	0	1
+E	Catelyn_Stark	Luwin	0	1
+E	Catelyn_Stark	Renly_Baratheon	2	4
+E	Talisa_Maegyr	Qyburn	4	5
+E	Talisa_Maegyr	Roose_Bolton	3	5
+E	Oberyn_Martell	Ellaria_Sand	6	8
+E	Oberyn_Martell	Tywin_Lannister	6	8
+E	Oberyn_Martell	Cersei_Lannister	6	8
+E	Oberyn_Martell	Bronn	6	7
+E	Oberyn_Martell	Joffrey_Baratheon	6	7
+E	Oberyn_Martell	Mace_Tyrell	7	8
+E	Oberyn_Martell	Tyrion_Lannister	6	8
+E	Oberyn_Martell	Pycelle	7	8
+E	Oberyn_Martell	Olyvar	6	7
+E	Oberyn_Martell	Shae	7	8
+E	Ros	Theon_Greyjoy	1	2
+E	Ros	Janos_Slynt	2	3
+E	Ros	Petyr_Baelish	1	3
+E	Ros	Joffrey_Baratheon	2	3
+E	Ros	Jaime_Lannister	0	1
+E	Ros	Pycelle	2	3
+E	Ros	Tyrion_Lannister	0	1	3	6
+E	Ros	Shae	4	5
+E	Orell	Tormund	5	7
+E	Orell	Jon_Snow	5	7
+E	Orell	Ygritte	4	7
+E	Rast	Eddison_Tollett	5	6
+E	Rast	Jon_Snow	0	2
+E	Rast	Samwell_Tarly	0	1	5	6
+E	Rast	Brandon_Stark	7	8
+E	Rast	Tyrion_Lannister	0	1
+E	Rast	Jeor_Mormont	4	6
+E	Rast	Alliser_Thorne	0	1
+E	Samwell_Tarly	Eddison_Tollett	2	5	7	8
+E	Samwell_Tarly	Aemon	2	3	6	10
+E	Samwell_Tarly	Hodor	6	7
+E	Samwell_Tarly	Brandon_Stark	6	7
+E	Samwell_Tarly	Janos_Slynt	6	7	8	9
+E	Samwell_Tarly	Olly	9	11
+E	Samwell_Tarly	Gilly	2	3	5	11
+E	Samwell_Tarly	Shireen_Baratheon	8	9
+E	Samwell_Tarly	Jojen_Reed	6	7
+E	Samwell_Tarly	Jon_Snow	0	4	6	11
+E	Samwell_Tarly	Locke	7	8
+E	Samwell_Tarly	Meera_Reed	6	7
+E	Samwell_Tarly	Jeor_Mormont	1	2	4	5
+E	Samwell_Tarly	Selyse_Baratheon	8	9
+E	Samwell_Tarly	Alliser_Thorne	0	2
+E	Margaery_Tyrell	Olenna_Tyrell	4	5	6	8	9	10
+E	Margaery_Tyrell	Tommen_Baratheon	7	10
+E	Margaery_Tyrell	Petyr_Baelish	3	4	6	8
+E	Margaery_Tyrell	Brienne_of_Tarth	6	7
+E	Margaery_Tyrell	Cersei_Lannister	4	6	7	10
+E	Margaery_Tyrell	Joffrey_Baratheon	4	7
+E	Margaery_Tyrell	Sansa_Stark	4	7
+E	Margaery_Tyrell	Renly_Baratheon	2	3
+E	Margaery_Tyrell	Olyvar	8	9
+E	Margaery_Tyrell	Loras_Tyrell	3	5	8	9
+E	Thoros	Arya_Stark	4	6
+E	Thoros	Sandor_Clegane	4	6
+E	Thoros	Anguy	4	6
+E	Thoros	Gendry	4	6
+E	Thoros	Melisandre	5	6
+E	Daenerys_Targaryen	Daario_Naharis	5	11
+E	Daenerys_Targaryen	Irri	0	4
+E	Daenerys_Targaryen	Missandei	4	10
+E	Daenerys_Targaryen	Barristan_Selmy	4	10
+E	Daenerys_Targaryen	Jorah_Mormont	0	8	9	10
+E	Daenerys_Targaryen	Tyrion_Lannister	9	11
+E	Daenerys_Targaryen	Hizdahr_zo_Loraq	7	11
+E	Daenerys_Targaryen	Viserys_Targaryen	0	2
+E	Daenerys_Targaryen	Drogo	0	2	4	5
+E	Daenerys_Targaryen	Grey_Worm	5	9
+E	Roose_Bolton	Theon_Greyjoy	6	7	9	10
+E	Roose_Bolton	Brienne_of_Tarth	5	6
+E	Roose_Bolton	Locke	5	7
+E	Roose_Bolton	Ramsay_Bolton	6	10
+E	Roose_Bolton	Jaime_Lannister	5	6
+E	Roose_Bolton	Sansa_Stark	8	10
+E	Roose_Bolton	Rickard_Karstark	3	5
+E	Roose_Bolton	Petyr_Baelish	8	9
+E	Jaqen_H'ghar	Arya_Stark	2	5	8	11
+E	Meera_Reed	Gilly	6	7
+E	Meera_Reed	Jojen_Reed	4	5	6	9
+E	Meera_Reed	Osha	4	7
+E	Meera_Reed	Hodor	7	8
+E	Meera_Reed	Rickon_Stark	5	6
+E	Meera_Reed	Brandon_Stark	5	9
+E	Shae	Tywin_Lannister	7	8
+E	Shae	Mace_Tyrell	7	8
+E	Shae	Bronn	2	3
+E	Shae	Cersei_Lannister	4	5
+E	Shae	Sansa_Stark	2	7
+E	Shae	Lancel	4	5
+E	Shae	Tyrion_Lannister	2	8
+E	Yoren	Sansa_Stark	2	3
+E	Yoren	Tyrion_Lannister	0	1	4	5
+E	Yoren	Gendry	2	3
+E	Yoren	Arya_Stark	1	3
+E	Eddison_Tollett	Janos_Slynt	8	9
+E	Eddison_Tollett	Jon_Snow	2	4	7	11
+E	Eddison_Tollett	Locke	7	8
+E	Eddison_Tollett	Jeor_Mormont	5	6
+E	Eddison_Tollett	Alliser_Thorne	6	8
+E	Myrcella_Baratheon	Joffrey_Baratheon	2	3
+E	Myrcella_Baratheon	Jaime_Lannister	9	11
+E	Myrcella_Baratheon	Tyrion_Lannister	0	1
+E	Myrcella_Baratheon	Cersei_Lannister	2	3
+E	Brandon_Stark	Rodrik_Cassel	0	1	3	4
+E	Brandon_Stark	Osha	1	7
+E	Brandon_Stark	Hodor	1	2	4	9
+E	Brandon_Stark	Rickon_Stark	1	5	6	7
+E	Brandon_Stark	Jaime_Lannister	0	1
+E	Brandon_Stark	Theon_Greyjoy	0	2	3	4
+E	Brandon_Stark	Jojen_Reed	4	9
+E	Brandon_Stark	Jon_Snow	0	1
+E	Brandon_Stark	Locke	7	8
+E	Brandon_Stark	Luwin	1	5
+E	Brandon_Stark	Tyrion_Lannister	0	1
+E	Olyvar	Ellaria_Sand	6	7
+E	Olyvar	Cersei_Lannister	9	10
+E	Olyvar	Lancel	8	9
+E	Olyvar	Petyr_Baelish	5	6
+E	Olyvar	Loras_Tyrell	5	6	8	10
+E	Jojen_Reed	Osha	4	6
+E	Jojen_Reed	Hodor	5	7
+E	Jojen_Reed	Rickon_Stark	6	7
+E	Yara_Greyjoy	Theon_Greyjoy	2	4	7	8
+E	Yara_Greyjoy	Ramsay_Bolton	7	8
+E	Yara_Greyjoy	Myranda	7	8
+E	Tyrion_Lannister	Rodrik_Cassel	1	2
+E	Tyrion_Lannister	Alliser_Thorne	0	1
+E	Tyrion_Lannister	Grey_Worm	10	11
+E	Tyrion_Lannister	Jorah_Mormont	9	11
+E	Tyrion_Lannister	Olenna_Tyrell	5	7
+E	Tyrion_Lannister	Petyr_Baelish	2	3	4	6
+E	Tyrion_Lannister	Jon_Snow	0	1
+E	Tyrion_Lannister	Tywin_Lannister	1	3	4	9
+E	Tyrion_Lannister	Sandor_Clegane	0	1	3	5
+E	Tyrion_Lannister	Joffrey_Baratheon	0	1	2	7
+E	Tyrion_Lannister	Jeor_Mormont	0	1
+E	Tyrion_Lannister	Janos_Slynt	2	3
+E	Tyrion_Lannister	Kevan_Lannister	1	3
+E	Tyrion_Lannister	Aemon	0	1
+E	Tyrion_Lannister	Bronn	1	8
+E	Tyrion_Lannister	Jaime_Lannister	0	1	6	9
+E	Tyrion_Lannister	Meryn_Trant	2	4	7	8
+E	Tyrion_Lannister	Lancel	3	5
+E	Tyrion_Lannister	Podrick_Payne	2	3	4	7
+E	Tyrion_Lannister	Theon_Greyjoy	0	1
+E	Tyrion_Lannister	Daario_Naharis	10	11
+E	Tyrion_Lannister	Missandei	10	11
+E	Tyrion_Lannister	Cersei_Lannister	0	1	2	7
+E	Tyrion_Lannister	Pycelle	2	3	4	5	7	8
+E	Tyrion_Lannister	Luwin	0	1
+E	Tyrion_Lannister	Hizdahr_zo_Loraq	10	11
+E	Tyrion_Lannister	Sansa_Stark	2	7
+E	Jeor_Mormont	Aemon	0	1
+E	Jeor_Mormont	Jon_Snow	1	4
+E	Drogo	Jorah_Mormont	0	1	2	3
+E	Drogo	Viserys_Targaryen	1	2
+E	Selyse_Baratheon	Shireen_Baratheon	8	9	10	11
+E	Selyse_Baratheon	Jon_Snow	9	10
+E	Selyse_Baratheon	Davos_Seaworth	9	10
+E	Selyse_Baratheon	Melisandre	6	8	9	11
+E	Hodor	Theon_Greyjoy	0	1
+E	Hodor	Rodrik_Cassel	3	4
+E	Hodor	Osha	3	4	5	7
+E	Hodor	Locke	7	8
+E	Hodor	Luwin	2	3
+E	Olly	Davos_Seaworth	8	9
+E	Olly	Jon_Snow	7	10
+E	Olly	Gilly	9	11
+E	Jaime_Lannister	Ellaria_Sand	10	11
+E	Jaime_Lannister	Petyr_Baelish	1	2
+E	Jaime_Lannister	Jon_Snow	0	1
+E	Jaime_Lannister	Tywin_Lannister	1	2	6	8
+E	Jaime_Lannister	Locke	4	6
+E	Jaime_Lannister	Joffrey_Baratheon	6	7
+E	Jaime_Lannister	Tommen_Baratheon	6	7
+E	Jaime_Lannister	Loras_Tyrell	6	7
+E	Jaime_Lannister	Olenna_Tyrell	6	7
+E	Jaime_Lannister	Brienne_of_Tarth	3	8
+E	Jaime_Lannister	Barristan_Selmy	0	1
+E	Jaime_Lannister	Bronn	6	11
+E	Jaime_Lannister	Meryn_Trant	6	7
+E	Jaime_Lannister	Theon_Greyjoy	2	3
+E	Jaime_Lannister	Qyburn	5	7
+E	Jaime_Lannister	Robert_Baratheon	0	1
+E	Jaime_Lannister	Cersei_Lannister	0	1	6	9
+E	Jaime_Lannister	Podrick_Payne	6	8
+E	Davos_Seaworth	Shireen_Baratheon	5	7	9	11
+E	Davos_Seaworth	Jon_Snow	8	9
+E	Davos_Seaworth	Melisandre	2	5	6	7
+E	Davos_Seaworth	Gendry	6	7
+E	Gendry	Arya_Stark	2	6
+E	Gendry	Tywin_Lannister	3	4
+E	Gendry	Anguy	5	6
+E	Gendry	Melisandre	5	6
+E	Gilly	Shireen_Baratheon	8	9
+E	Gilly	Jon_Snow	2	3
+E	Gilly	Aemon	6	7	9	10
+E	Daario_Naharis	Grey_Worm	6	7	8	9	10	11
+E	Daario_Naharis	Missandei	6	7	10	11
+E	Daario_Naharis	Barristan_Selmy	5	7	8	9
+E	Daario_Naharis	Jorah_Mormont	6	8	10	11
+E	Daario_Naharis	Hizdahr_zo_Loraq	8	9	10	11
+E	Arya_Stark	Brienne_of_Tarth	8	9
+E	Arya_Stark	Sansa_Stark	0	3
+E	Arya_Stark	Meryn_Trant	1	2
+E	Arya_Stark	Sandor_Clegane	5	9
+E	Arya_Stark	Petyr_Baelish	0	2	3	4
+E	Arya_Stark	Robert_Baratheon	0	1
+E	Arya_Stark	Jon_Snow	0	1
+E	Arya_Stark	Tywin_Lannister	3	4
+E	Arya_Stark	Joffrey_Baratheon	0	1
+E	Arya_Stark	Cersei_Lannister	0	1
+E	Arya_Stark	Anguy	4	6
+E	Myranda	Theon_Greyjoy	5	6	10	11
+E	Myranda	Ramsay_Bolton	6	7	9	10
+E	Myranda	Sansa_Stark	9	11
+E	Pycelle	Sansa_Stark	1	3
+E	Pycelle	Lancel	8	9
+E	Pycelle	Renly_Baratheon	0	2
+E	Pycelle	Qyburn	8	9
+E	Pycelle	Petyr_Baelish	0	3	4	5
+E	Pycelle	Tywin_Lannister	7	8
+E	Pycelle	Joffrey_Baratheon	1	3	4	5	6	7
+E	Pycelle	Cersei_Lannister	1	4	6	7	8	9
+E	Anguy	Sandor_Clegane	4	6
+E	Anguy	Melisandre	5	6
+E	Meryn_Trant	Tywin_Lannister	7	8
+E	Meryn_Trant	Bronn	2	3	4	5
+E	Meryn_Trant	Joffrey_Baratheon	4	5
+E	Meryn_Trant	Cersei_Lannister	8	9
+E	Rodrik_Cassel	Theon_Greyjoy	3	4
+E	Rodrik_Cassel	Bronn	1	2
+E	Rodrik_Cassel	Luwin	3	4
+E	Ellaria_Sand	Tywin_Lannister	6	7
+E	Rickard_Karstark	Theon_Greyjoy	2	3
+E	Rickard_Karstark	Brienne_of_Tarth	3	4
+E	Jorah_Mormont	Irri	0	1
+E	Jorah_Mormont	Missandei	4	5
+E	Jorah_Mormont	Barristan_Selmy	4	8
+E	Jorah_Mormont	Viserys_Targaryen	0	2
+E	Shireen_Baratheon	Melisandre	6	7	10	11
+E	Petyr_Baelish	Tywin_Lannister	3	4
+E	Petyr_Baelish	Joffrey_Baratheon	4	5
+E	Petyr_Baelish	Loras_Tyrell	3	4
+E	Petyr_Baelish	Olenna_Tyrell	9	10
+E	Petyr_Baelish	Janos_Slynt	2	3
+E	Petyr_Baelish	Brienne_of_Tarth	8	9
+E	Petyr_Baelish	Bronn	2	3
+E	Petyr_Baelish	Sansa_Stark	0	3	4	10
+E	Petyr_Baelish	Lancel	9	10
+E	Petyr_Baelish	Robert_Baratheon	0	2
+E	Petyr_Baelish	Ramsay_Bolton	8	9
+E	Petyr_Baelish	Cersei_Lannister	2	3	5	6	9	10
+E	Petyr_Baelish	Renly_Baratheon	0	3
+E	Locke	Theon_Greyjoy	6	7
+E	Locke	Alliser_Thorne	7	8
+E	Locke	Brienne_of_Tarth	5	6
+E	Locke	Jon_Snow	7	8
+E	Joffrey_Baratheon	Tywin_Lannister	5	7
+E	Joffrey_Baratheon	Cersei_Lannister	0	3	4	7
+E	Joffrey_Baratheon	Loras_Tyrell	4	5
+E	Joffrey_Baratheon	Olenna_Tyrell	5	6
+E	Joffrey_Baratheon	Mace_Tyrell	6	7
+E	Joffrey_Baratheon	Brienne_of_Tarth	6	7
+E	Joffrey_Baratheon	Barristan_Selmy	1	3
+E	Joffrey_Baratheon	Sansa_Stark	0	6
+E	Joffrey_Baratheon	Lancel	2	5
+E	Joffrey_Baratheon	Robert_Baratheon	0	1
+E	Joffrey_Baratheon	Sandor_Clegane	0	1	2	5
+E	Mace_Tyrell	Tywin_Lannister	7	8
+E	Mace_Tyrell	Cersei_Lannister	8	10
+E	Janos_Slynt	Aemon	6	7	8	9
+E	Janos_Slynt	Bronn	2	3	7	8
+E	Janos_Slynt	Jon_Snow	6	9
+E	Janos_Slynt	Cersei_Lannister	2	3
+E	Janos_Slynt	Renly_Baratheon	0	1
+E	Janos_Slynt	Alliser_Thorne	7	8
+E	Osha	Theon_Greyjoy	1	2	3	4
+E	Osha	Rickon_Stark	2	4	6	7
+E	Osha	Luwin	1	2	3	5
+E	Barristan_Selmy	Cersei_Lannister	1	3
+E	Barristan_Selmy	Grey_Worm	8	9
+E	Barristan_Selmy	Missandei	6	8
+E	Barristan_Selmy	Robert_Baratheon	0	2
+E	Barristan_Selmy	Hizdahr_zo_Loraq	8	9
+E	Bronn	Sandor_Clegane	3	4
+E	Bronn	Podrick_Payne	4	5	6	7
+E	Luwin	Theon_Greyjoy	0	2	3	5
+E	Luwin	Rickon_Stark	4	5
+E	Podrick_Payne	Olenna_Tyrell	5	6
+E	Podrick_Payne	Brienne_of_Tarth	7	11
+E	Podrick_Payne	Sandor_Clegane	4	5	8	9
+E	Podrick_Payne	Sansa_Stark	6	7
+E	Alliser_Thorne	Jon_Snow	0	2	6	10
+E	Alliser_Thorne	Aemon	6	7
+E	Ygritte	Tormund	4	8
+E	Ygritte	Jon_Snow	3	9
+E	Loras_Tyrell	Lancel	8	10
+E	Loras_Tyrell	Brienne_of_Tarth	2	3
+E	Loras_Tyrell	Sansa_Stark	4	6
+E	Loras_Tyrell	Cersei_Lannister	5	6	8	9
+E	Loras_Tyrell	Renly_Baratheon	1	3
+E	Jon_Snow	Tormund	4	11
+E	Jon_Snow	Aemon	1	3	6	7	9	10
+E	Jon_Snow	Theon_Greyjoy	0	1
+E	Jon_Snow	Melisandre	8	10
+E	Tywin_Lannister	Olenna_Tyrell	5	7
+E	Tywin_Lannister	Kevan_Lannister	1	4
+E	Tywin_Lannister	Tommen_Baratheon	6	7
+E	Tywin_Lannister	Cersei_Lannister	5	9
+E	Cersei_Lannister	Tommen_Baratheon	2	3	4	5	8	10
+E	Cersei_Lannister	Olenna_Tyrell	5	6	9	10
+E	Cersei_Lannister	Kevan_Lannister	8	9
+E	Cersei_Lannister	Brienne_of_Tarth	6	7
+E	Cersei_Lannister	Sansa_Stark	0	5
+E	Cersei_Lannister	Lancel	2	3	4	5	8	9
+E	Cersei_Lannister	Qyburn	6	7	8	10
+E	Cersei_Lannister	Robert_Baratheon	0	2
+E	Tommen_Baratheon	Sansa_Stark	2	3
+E	Olenna_Tyrell	Brienne_of_Tarth	6	7
+E	Olenna_Tyrell	Sansa_Stark	4	5
+E	Melisandre	Renly_Baratheon	3	4
+E	Brienne_of_Tarth	Sandor_Clegane	8	9
+E	Brienne_of_Tarth	Sansa_Stark	8	9
+E	Brienne_of_Tarth	Renly_Baratheon	2	3
+E	Sansa_Stark	Sandor_Clegane	0	1	3	5
+E	Sansa_Stark	Renly_Baratheon	1	2
+E	Sansa_Stark	Theon_Greyjoy	9	11
+E	Sansa_Stark	Robert_Baratheon	0	1
+E	Sansa_Stark	Ramsay_Bolton	9	10
+E	Lancel	Robert_Baratheon	0	2
+E	Theon_Greyjoy	Ramsay_Bolton	4	8	9	10
+E	Robert_Baratheon	Renly_Baratheon	1	2
+E	Missandei	Grey_Worm	6	11
