@@ -3,20 +3,27 @@ import networkx as nx
 from .communitiesEventsHandler import *
 from dynetx.utils.Intervals import *
 from.fileReading import *
+import numpy as np
 
 
 class dynamicCommunitiesTN:
     def __init__(self):
-        self.nodes = {}
+        self.nodes = {} #type:{str:{int:{intervals}}
         self.communities = {}
         self.events=CommunitiesEvent()
 
-    def addNodeComRelationship(self, n, com, t, e):
+
+    def addBelonging(self, n, com, t, e=np.inf):
         n = str(n)
         self.nodes.setdefault(n,{}).setdefault(com,intervals()).addInterval((t,e))
         self.communities.setdefault(com, {}).setdefault(n,intervals()).addInterval((t,e))
 
-    def addEvent(self,comsBefore, comsAfter,tBefore,tAfter,type):
+    def removeBelonging(self,n,com,t,e=np.inf):
+        n = str(n)
+        self.nodes[n][com].removeInterval((t,e))
+        self.communities[com][n].removeInterval((t,e))
+
+    def addEvent(self,comsBefore, comsAfter,tBefore,tAfter,type): #type can be merge, continue, split or unknown
         self.events.addEvent(comsBefore,comsAfter,tBefore,tAfter,type)
 
     def writeAsSGC(self, outputFile,renumber=False):  # SG => stream graph. format I use for my visualisation

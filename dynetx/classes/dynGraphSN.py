@@ -124,32 +124,32 @@ class DynGraphSN(nx.Graph):
         self._snapshots[t]=graphSN
 
 
-    def nodes_iter(self, t=None, data=False):
-        """Return an iterator over the nodes with respect to a given temporal snapshot.
-
-        Parameters
-        ----------
-        t : snapshot id (default=None).
-            If None the iterator returns all the nodes of the flattened graph.
-        data : boolean, optional (default=False)
-               If False the iterator returns nodes.  If True
-               return a two-tuple of node and node data dictionary
-
-        Returns
-        -------
-        niter : iterator
-            An iterator over nodes.  If data=True the iterator gives
-            two-tuples containing (node, node data, dictionary)
-
-        Examples
-        --------
-        >>> G = dn.DynGraph()   # or DiGraph, MultiGraph, MultiDiGraph, etc
-        >>> G.add_path([0,1,2], 0)
-
-        >>> [n for n, d in G.nodes_iter(t=0)]
-        [0, 1, 2]
-        """
-        return self._snapshots.iloc[t].nodes_iter(data=data)
+    # def nodes_iter(self, t=None, data=False):
+    #     """Return an iterator over the nodes with respect to a given temporal snapshot.
+    #
+    #     Parameters
+    #     ----------
+    #     t : snapshot id (default=None).
+    #         If None the iterator returns all the nodes of the flattened graph.
+    #     data : boolean, optional (default=False)
+    #            If False the iterator returns nodes.  If True
+    #            return a two-tuple of node and node data dictionary
+    #
+    #     Returns
+    #     -------
+    #     niter : iterator
+    #         An iterator over nodes.  If data=True the iterator gives
+    #         two-tuples containing (node, node data, dictionary)
+    #
+    #     Examples
+    #     --------
+    #     >>> G = dn.DynGraph()   # or DiGraph, MultiGraph, MultiDiGraph, etc
+    #     >>> G.add_path([0,1,2], 0)
+    #
+    #     >>> [n for n, d in G.nodes_iter(t=0)]
+    #     [0, 1, 2]
+    #     """
+    #     return self._snapshots.iloc[t].nodes_iter(data=data)
 
     def nodes(self, nbunch=None):
         return self.nodeLife(nbunch)
@@ -1002,7 +1002,7 @@ class DynGraphSN(nx.Graph):
             return self._snapshots
         return self._snapshots[t]
 
-    def nodeLife(self,nbunch=None):
+    def nodeLife(self,nbunch=None): #return a dictionary, for each node its existing times
         toReturn = {}
         if nbunch!=None:
             nbunch ="not implemented yet"

@@ -7,7 +7,7 @@ import matplotlib
 from dynetx.DCD.louvainModified import best_partition
 from dynetx.utils import dynamicCommunitiesSN
 import os
-import time
+
 
 ###############################
 ######For this class, it is necessary to have Matlab installed
@@ -20,65 +20,58 @@ def preprocessMatrixForm(om):
     #initialisation inspired by http://netwiki.amath.unc.edu/GenLouvain/GenLouvain
 
     Gs = [nx.karate_club_graph(), nx.karate_club_graph()]
+    GsMat = [nx.to_numpy_matrix(mat).tolist() for mat in Gs]
     nodeOrder = list(Gs[0].nodes())
-    N = len(nodeOrder)
-    T = len(Gs)
 
-    print("N", N)
-    print("T", T)
-    twomu = 0
-    B = numpy.zeros(shape=(N * T, N * T))
-    i = 1
+    SocNet = dict()
+    #SocNet["W"]=matlab.double(numpy.stack(GsMat).tolist())
+    stacked = numpy.stack(GsMat)
+    listed = stacked.tolist()
+    SocNet["W"]=matlab.double(listed)
 
-    for g in Gs:
-        gmat = nx.to_numpy_matrix(g, nodelist=nodeOrder)
-        k = gmat.sum(axis=0)
-        twom = k.sum(axis=1)
-        twomu = twomu + twom
-        indx = numpy.arange(start=0, stop=N) + numpy.array([(i - 1) * N] * N)
+    SocNet["n"] = len(nodeOrder)
+    SocNet["T"]=len(GsMat)
+    SocNet["cellW"]=[]
+    SocNet["Index"]=[]
 
-        nullModel = k.transpose() * k / twom
-        B[numpy.ix_(indx, indx)] = gmat - nullModel  # for each slice, put the modularity matrix
+    K=5
 
-        i += 1
+    net=dict()
+    net["type"]="binary"
+    net["wthrehold"]=-1 #ignored
+    net["para"]=[]
+    net["Temp"]=matlab.double(numpy.arange(1,-0.1,-0.1).tolist())#"1:-0.1:0"
+    net["N"]=matlab.double([20]*2+[10]*5+[5]*4)#"[20*ones(1,2) 10*ones(1,5) 5*ones(1,4)]"
+    net["Z"]=[]
+    net["verbosity"]=1
+    net["objfunc"]=[]
 
-    twomu = twomu + 2 * om * N * (T - 1)
-    ones = numpy.ones((2, N * T))
-    diags = [-N, N]
-    omegaMat = scipy.sparse.spdiags(ones, diags, N * T, N * T)
-    numpy.savetxt("test", omegaMat.A, fmt="%.2f")
 
-    omegaMat = omegaMat * om
-    B = B + omegaMat
+
 
     # matlab code
-    S = runMatlabCode(B)
+    S = runMatlabCode(SocNet,K,net)
     print(S)
 
 
-def runMatlabCode(matrix):
+def runMatlabCode(SocNet,K,net):
     dir = os.path.dirname(__file__)
-    visuAddress = os.path.join(dir, "GenLouvain-master")
+    visuAddress = os.path.join(dir, "YangOriginal")
 
 
-    matFormat = matlab.double(matrix.tolist())
+    #matFormat = matlab.double(matrix.tolist())
 
     print("starting matlab engine")
     eng = engine.start_matlab()
     eng.addpath(visuAddress, nargout=0)
     print("matlab engine started successfully")
-    start_time = time.time()
 
-
-    (S, Q) = eng.genlouvain(matFormat, nargout=2)
-
-    duration = (time.time() - start_time)
-
-
-    return(S,duration)
+    #print(matFormat)
+    (S, Q) = eng.SBMDynamicEvolutionOfflineDynamic2(SocNet,K,net)
+    return(S)
     # S = numpy.asarray(S).reshape(2, 34)
 
-def muchaOriginal(dynNetSN, om=0.5,form="local",runningTime=False):
+def muchaOriginal(dynNetSN, om=0.5,form="local"):
     #print("INITIALISING MUCHA ")
 
     #dynNetSN.remove_nodes_from(dynNetSN.isolates())
@@ -116,10 +109,7 @@ def muchaOriginal(dynNetSN, om=0.5,form="local",runningTime=False):
 
     numpy.savetxt("test.csv", B, fmt="%.2f", delimiter=",")
 
-
-    (S,duration) = runMatlabCode(B)
-    if runningTime:
-        return duration
+    S = runMatlabCode(B)
 
     DCSN = dynamicCommunitiesSN()
     for i in range(len(S)):
@@ -128,5 +118,5 @@ def muchaOriginal(dynNetSN, om=0.5,form="local",runningTime=False):
 
 
 
-#preprocessMatrixForm(0.5)
+preprocessMatrixForm(0.5)
 #muchaOriginal("bla")

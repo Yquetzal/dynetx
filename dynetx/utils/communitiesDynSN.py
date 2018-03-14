@@ -7,7 +7,7 @@ from operator import itemgetter
 from collections import Iterable
 class dynamicCommunitiesSN:
     def __init__(self):
-        self._communities=SortedDict() #A sorted dict, key:time, value: bidict {set of nodes}:id
+        self._communities=SortedDict() #A sorted dict, key:time, value: bidict {frozenset of nodes}:id
         self.events=CommunitiesEvent()
         self.automaticID=1
 
@@ -31,6 +31,14 @@ class dynamicCommunitiesSN:
                 if not cs in coms.inv:
                     coms.inv[cs]=frozenset()
                 coms.inv[cs]=coms.inv[cs].union(n)
+
+    def addBelongins_from(self,clusters,t):
+        """
+
+        :param clusters: bidict{frozenset of nodes}:id
+        :return:
+        """
+        self._communities[t]=clusters
 
     def addCommunity(self,t,com,id=None): #com is a community provided as a set/list of nodes
         com = frozenset(com)
@@ -116,7 +124,7 @@ class dynamicCommunitiesSN:
 
             for (c,cID) in self._communities.peekitem(i)[1].items(): #for each community for this timestep
                 for n in c:#get the nodes, not the
-                    dynComTN.addNodeComRelationship(n,cID,t,tNext)
+                    dynComTN.addBelonging(n, cID, t, tNext)
 
 
         #convert also events

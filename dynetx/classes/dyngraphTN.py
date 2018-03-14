@@ -122,35 +122,46 @@ class DynGraphTN(nx.Graph):
         self.start=math.inf
         self.end=-math.inf
 
-    def nodesD(self, t=None,data=False):
-        """Return an iterator over the nodes with respect to a given temporal snapshot.
+    def nodesD(self,nbunch=None,t=None):
+        if t!=None:
+            raise Exception("not implemented yet")
+        return self.nodeLife(nbunch)
+    # def nodesD(self, t=None,data=False):
+    #     """Return an iterator over the nodes with respect to a given temporal snapshot.
+    #
+    #     Parameters
+    #     ----------
+    #     t : snapshot id (default=None).
+    #         If None the iterator returns all the nodes of the flattened graph.
+    #     data : boolean, optional (default=False)
+    #            If False the iterator returns nodes.  If True
+    #            return a two-tuple of node and node data dictionary
+    #
+    #     Returns
+    #     -------
+    #     niter : iterator
+    #         An iterator over nodes.  If data=True the iterator gives
+    #         two-tuples containing (node, node data, dictionary)
+    #
+    #     Examples
+    #     --------
+    #     >>> G = dn.DynGraph()   # or DiGraph, MultiGraph, MultiDiGraph, etc
+    #     >>> G.add_path([0,1,2], 0)
+    #
+    #     >>> [n for n, d in G.nodes_iter(t=0)]
+    #     [0, 1, 2]
+    #     """
+    #     return iter([(n,d["t"]) for (n,d) in self._nodes(data=True)])
 
-        Parameters
-        ----------
-        t : snapshot id (default=None).
-            If None the iterator returns all the nodes of the flattened graph.
-        data : boolean, optional (default=False)
-               If False the iterator returns nodes.  If True
-               return a two-tuple of node and node data dictionary
-
-        Returns
-        -------
-        niter : iterator
-            An iterator over nodes.  If data=True the iterator gives
-            two-tuples containing (node, node data, dictionary)
-
-        Examples
-        --------
-        >>> G = dn.DynGraph()   # or DiGraph, MultiGraph, MultiDiGraph, etc
-        >>> G.add_path([0,1,2], 0)
-
-        >>> [n for n, d in G.nodes_iter(t=0)]
-        [0, 1, 2]
-        """
-        return iter([(n,d["t"]) for (n,d) in self._nodes(data=True)])
-
-    def edges(self,data=False):
-        return iter([(u,v,d["t"]) for (u,v,d) in self._edges(data=True)])
+    #def edges(self,data=False):
+     #   return iter([(u,v,d["t"]) for (u,v,d) in self._edges(data=True)])
+    def edgesD(self,nbunch=None):
+        toReturn = {}
+        if nbunch != None:
+            nbunch = "not implemented yet"
+        for (n1,n2, data) in self.edges(data=True):
+            toReturn[(n1,n2)]=data["t"]
+        return toReturn
 
     def __presence_test(self, u, v, t):
         spans = self._adj[u][v]['t']
@@ -1006,3 +1017,10 @@ class DynGraphTN(nx.Graph):
         for (n,t,e) in nodes:
             self.add_node(n,t,e)
 
+    def nodeLife(self, nbunch=None):  # return a dictionary, for each node its existing times
+        toReturn = {} #type:{str:[intervals]}
+        if nbunch != None:
+            nbunch = "not implemented yet"
+        for (n,data) in self.nodes(data=True):
+            toReturn[n]=data["t"]
+        return toReturn

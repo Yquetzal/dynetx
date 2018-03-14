@@ -4,7 +4,7 @@ import dynetx as dn
 from operator import itemgetter
 from collections import defaultdict
 from dynetx.utils import dynamicCommunitiesSN
-
+import time
 
 __author__ = "Giulio Rossetti"
 __contact__ = "giulio.rossetti@gmail.com"
@@ -18,7 +18,7 @@ __license__ = "BSD"
 
 
 
-def rollingCPM(dynNetSN,k=3):
+def rollingCPM(dynNetSN,k=3,runningTime=False):
 
     #print("computing PALLA with k: "+str(k))
     DynCom = dynamicCommunitiesSN()
@@ -27,6 +27,9 @@ def rollingCPM(dynNetSN,k=3):
     lastcid = 0
     tabDurations =[]
     graphs=dynNetSN.snapshots()
+
+    start_time = time.time()
+
     for (date, graph) in graphs.items():
         #print("--- t:"+str(date))
         start = timer()
@@ -99,8 +102,11 @@ def rollingCPM(dynNetSN,k=3):
             dateOld=date
             old_communities = communitiesAtT
 
-        end = timer()
-        DynCom.relabelComsFromContinuousEvents()
+    duration = (time.time() - start_time)
+    DynCom.relabelComsFromContinuousEvents()
+
+    if runningTime:
+        return duration
     return(DynCom)
 
 def _get_percolated_cliques(g, k):

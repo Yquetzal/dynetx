@@ -1,6 +1,6 @@
 from dynetx.DCD.louvain import *
 from dynetx.utils import dynamicCommunitiesSN
-
+import time
 __author__ = "Giulio Rossetti"
 __contact__ = "giulio.rossetti@gmail.com"
 __website__ = "about.giuliorossetti.net"
@@ -49,7 +49,7 @@ def computePartitions(dynNetSN,CDalgo,*args):
             coms.addCommunity(SNt,asNodeSets[c])
     return coms
 
-def greene(dynNetSN,mt=0.3,CDalgo="louvain",*args): #mt is the merge threashold. Algo can be either a networkx function returning communities of the string "louvain" to use louvain algorithm
+def greene(dynNetSN,mt=0.3,CDalgo="louvain",runningTime=False,*args): #mt is the merge threashold. Algo can be either a networkx function returning communities of the string "louvain" to use louvain algorithm
 
 
     #print("computing Greene with mt:",mt)
@@ -59,12 +59,21 @@ def greene(dynNetSN,mt=0.3,CDalgo="louvain",*args): #mt is the merge threashold.
         CDalgo=best_partition
 
     #print("Greene: computing partitions")
+    start_time = time.time()
+
     dynPartitions = computePartitions(dynNetSN,CDalgo,*args)
+    duration = (time.time() - start_time)
+
+    if runningTime:
+        return(duration)
+
 
     #print("Greene: matching communities")
     build_matches(dynPartitions,mt)
     #print("Greene: identify events")
     dynPartitions.relabelComsFromContinuousEvents(typedEvents=False)
+
+
 
     return dynPartitions
 
