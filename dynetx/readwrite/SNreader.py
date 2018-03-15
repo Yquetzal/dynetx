@@ -180,7 +180,7 @@ def writeAsOrderedModifList(dynNet:dn.DynGraphTN, fileOutput,dateEveryLine=False
         """
 
         if type(dynNet) is dn.DynGraphSN:
-            dynNet = dynNet.toDynGraphTN()
+            dynNet = dynNet.toDynGraphTN(convertTimeToInteger=False)
 
         timeOfActions = SortedDict()
         #NOTE : can be easily optimized ! one complete check to add and to remove nodes...
@@ -192,6 +192,7 @@ def writeAsOrderedModifList(dynNet:dn.DynGraphTN, fileOutput,dateEveryLine=False
                 #times = self.nodes[n]
                 for interv in intervs.getIntervals():
                     addDate = interv[0]
+
                     #delDate = maxInterval(interv)
                     timeOfActions.setdefault(addDate,[]).append("+n" + separator + str(n))
 
@@ -318,14 +319,10 @@ def readLinkStream(inputFile, toSN=True):  # SOCIOPATTERN format
     """
     theDynGraph = dn.DynGraphSN()
     f = open(inputFile)
-    endDate = -1
-    date = -1
-    setComsThisStep = set()
+
     for l in f:
-    # nodeList = []
-    # start = inf
-    # end=-inf
-        date = float(l[0])
+        l = l.split("\t")
+        date = int(l[0])
         n1 = l[1]
         n2 = l[2]
         #theDynGraph.add_interaction(n1,n2,date,date+intervalsToAdd)
@@ -353,8 +350,6 @@ def readSNByCom(inputDir, nameFilter=None, **kwargs):
                 timeIDs[timeID]=f
 
         #visibleFiles = timeIDs.keys()
-    print("reading communities, ordered files:")
-    print(timeIDs.keys())
     currentComIDs = 0
 
     for t in timeIDs:  # for each file in order of their name
