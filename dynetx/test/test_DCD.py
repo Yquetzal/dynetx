@@ -10,34 +10,51 @@ import datetime
 
 class DCDTestCase(unittest.TestCase):
 
+    # def test_AggregateDynamicNetwork(self):
+    #     socioPatternsOriginalFile = "/Users/cazabetremy/ownCloud/Projets/SouaadNMI/SOCIOPATTERNdataset/thiers_2012.csv"
+    #
+    #     #load the file as a dynamic network
+    #     dynNetwork = dn.readLinkStream(socioPatternsOriginalFile)
+    #     dynNetwork = dynNetwork.aggregateTime(bin=60*60*24)
+    #
+    #     #write resulting file
+    #     fileToWrite = "/Users/cazabetremy/ownCloud/Projets/SouaadNMI/SOCIOPATTERNdataset/SP2012.OMLRN"
+    #     dn.writeAsOrderedModifList(dynNetwork,fileToWrite,dateEveryLine=True,nodeModifications=True)
 
-    def test_Souaad(self):
+    def test_runOLCPM(self):
+        OLCPMlocation = "/Users/cazabetremy/ownCloud/Projets/SouaadNMI/SOCIOPATTERNdataset/OLCPM.jar"
+        OMLRNfile = "/Users/cazabetremy/ownCloud/Projets/SouaadNMI/SOCIOPATTERNdataset/SP2012.OMLRN"
+        directoryForOutput = "/Users/cazabetremy/ownCloud/Projets/SouaadNMI/SOCIOPATTERNdataset/test2"
+        dn.launchCommandWaitAnswer("java -jar "+OLCPMlocation+ " -i "+OMLRNfile+" -o "+directoryForOutput+" -k 4",printOutput=False)
 
-        #Lire un fichier de vérité de terrain au format de SOCIOPATTERN
-        groundTruthCommunities = dn.readStaticSNByNode("/Users/cazabetremy/Downloads/SOCIOPATTERNdataset/metadata_2012.txt")
-
-        #Définit une fonction qui transforme un nom de fichier en un identifiant de time step. (ici, extrait le timestamp du nom de fichier pour OLCPM)
-        def fileNameToTimeID(fileName:str):
-            if not fileName.startswith("Alv"):
-                return None
-            value = fileName[10:-6]
-            print(value)
-            return int(value)
-
-        #Charge des communautés dynamiques à partir d'un dossier qui contient 1 fichier par timestamp, avec les options pour lire les fichiers produits par OLCPM
-        dynCom = dn.readSNByCom("/Users/cazabetremy/Downloads/SOCIOPATTERNdataset/test",fileNameToTimeID,nodeInBrackets=True,nodeSeparator=", ",nodeListPosition=2)
-
-        #Récupère les communautés
-        communities = dynCom.communities()
-
-        #Pour chaque timestep, calcule la NMI entre les communautés à ce timestep et la ground truth
-        NMIs = SortedDict()
-        for t in communities:
-            NMIs[t]=dn.NMI(set(communities[t].keys()),set(groundTruthCommunities.keys()))
-
-        #Affiche la liste des NMI calculées avec les dates/heures correspondantes
-        for k,v in NMIs.items():
-            print(datetime.datetime.fromtimestamp(k).strftime('%Y-%m-%d %H:%M:%S'),"\t",v)
+    # def test_Souaad(self):
+    #
+    #
+    #     #Lire un fichier de vérité de terrain au format de SOCIOPATTERN
+    #     groundTruthCommunities = dn.readStaticSNByNode("/Users/cazabetremy/Downloads/SOCIOPATTERNdataset/metadata_2012.txt")
+    #
+    #     #Définit une fonction qui transforme un nom de fichier en un identifiant de time step. (ici, extrait le timestamp du nom de fichier pour OLCPM)
+    #     def fileNameToTimeID(fileName:str):
+    #         if not fileName.startswith("Alv"):
+    #             return None
+    #         value = fileName[10:-6]
+    #         return int(value)
+    #
+    #     #Charge des communautés dynamiques à partir d'un dossier qui contient 1 fichier par timestamp, avec les options pour lire les fichiers produits par OLCPM
+    #     dynCom = dn.readSNByCom("/Users/cazabetremy/Downloads/SOCIOPATTERNdataset/test",fileNameToTimeID,nodeInBrackets=True,nodeSeparator=", ",nodeListPosition=2)
+    #
+    #     #Récupère les communautés
+    #     communities = dynCom.communities()
+    #
+    #     #Pour chaque timestep, calcule la NMI entre les communautés à ce timestep et la ground truth
+    #     NMIs = SortedDict()
+    #     for t in communities:
+    #         NMIs[t]=dn.NMI(set(communities[t].keys()),set(groundTruthCommunities.keys()))
+    #
+    #     #Affiche la liste des NMI calculées avec les dates/heures correspondantes
+    #     for k,v in NMIs.items():
+    #         print(datetime.datetime.fromtimestamp(k).strftime('%Y-%m-%d %H:%M:%S'),"\t",v)
+    #
 
 
 

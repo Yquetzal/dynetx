@@ -8,6 +8,7 @@ Self-loops are allowed.
 from sortedcontainers import *
 from collections import Iterable
 
+import math
 import networkx as nx
 from collections import defaultdict
 from dynetx.utils import not_implemented
@@ -120,7 +121,9 @@ class DynGraphSN(nx.Graph):
         if data!=None:
             self._snapshots = SortedDict(data)
 
-    def addSnaphsot(self,t, graphSN):
+    def addSnaphsot(self,t, graphSN=None):
+        if graphSN==None:
+            graphSN=nx.Graph()
         self._snapshots[t]=graphSN
 
 
@@ -302,11 +305,15 @@ class DynGraphSN(nx.Graph):
 
         will produce an interaction present in snapshots [0, 9]
         """
+        if not t in self._snapshots:
+            self.addSnaphsot(t)
         indexFirstSN = self._snapshots.index(t)
+        indexLastSN=indexFirstSN+1
+
         if e!=None:
-            indexLastSN = self._snapshots.index(e)
+            indexLastSN = self._snapshots.index(e)+1
         for i in range(indexFirstSN,indexLastSN):
-            self._snapshots.iloc[i].add_edge(u, v)
+            self._snapshots.peekitem(i)[1].add_edge(u, v)
 
 
     def add_interactions_from(self, ebunch, t=None, e=None):
@@ -950,6 +957,11 @@ class DynGraphSN(nx.Graph):
         pass
 
     def toDynGraphTN(self,convertTimeToInteger=True):
+        """
+        Problem : what to do with the end ? ...
+        :param convertTimeToInteger:
+        :return:
+        """
         toReturn = DynGraphTN()
 
 
@@ -963,7 +975,11 @@ class DynGraphSN(nx.Graph):
                 if i<len(self._snapshots)-1:
                     tNext=self._snapshots.peekitem(i + 1)[0]
                 else:
-                    tNext = self._snapshots.peekitem("END")[1]
+                    #tNext = self._snapshots.peekitem("END")[1]
+                    if type(t) is str:
+                        tNext="END"
+                    else:
+                        tNext = t+1 ####### BE CAREFUL we could choose inf or.....
 
             toReturn.add_nodes_from([(n,t,tNext) for n in self._snapshots.peekitem(i)[1].nodes()])
             toReturn.add_edges_from([(u,v,t,tNext) for (u,v) in self._snapshots.peekitem(i)[1].edges()])
@@ -996,6 +1012,38 @@ class DynGraphSN(nx.Graph):
             for k in toDelete:
                  del self._snapshots[k]
             i+=1
+
+    def aggregateTime(self, bin=None,shift=None,start=None,end=None):
+        """
+
+        :param bin: time in s
+        :param start: timestamp default first
+        :param end: timestamp default last
+        :return:
+        """
+        if start==None:
+            start = self.snapshots().iloc[0]
+        if end==None:
+            end=self.snapshots().iloc[-1]
+        if shift==None:
+            shift=bin
+
+
+        bins = []
+        for t in range(start,end,shift):
+            bins.append((t,t+bin))
+
+        toReturn = DynGraphSN()
+        for (binStart,binEnd) in bins:
+            print("aggregating",binStart,binEnd)
+            keys = self.snapshots().irange(binStart,binEnd,inclusive=(True,False))
+            keys = list(keys)
+            if len(keys)>0:
+                toReturn.addSnaphsot(binStart,nx.compose_all([self._snapshots[k] for k in keys]))
+            else:
+                toReturn.addSnaphsot(binStart)
+        return toReturn
+
 
     def snapshots(self, t=None):
         if t==None:
