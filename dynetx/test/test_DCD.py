@@ -21,11 +21,11 @@ class DCDTestCase(unittest.TestCase):
     #     fileToWrite = "/Users/cazabetremy/ownCloud/Projets/SouaadNMI/SOCIOPATTERNdataset/SP2012.OMLRN"
     #     dn.writeAsOrderedModifList(dynNetwork,fileToWrite,dateEveryLine=True,nodeModifications=True)
 
-    def test_runOLCPM(self):
-        OLCPMlocation = "/Users/cazabetremy/ownCloud/Projets/SouaadNMI/SOCIOPATTERNdataset/OLCPM.jar"
-        OMLRNfile = "/Users/cazabetremy/ownCloud/Projets/SouaadNMI/SOCIOPATTERNdataset/SP2012.OMLRN"
-        directoryForOutput = "/Users/cazabetremy/ownCloud/Projets/SouaadNMI/SOCIOPATTERNdataset/test2"
-        dn.launchCommandWaitAnswer("java -jar "+OLCPMlocation+ " -i "+OMLRNfile+" -o "+directoryForOutput+" -k 4",printOutput=False)
+    # def test_runOLCPM(self):
+    #     OLCPMlocation = "/Users/cazabetremy/ownCloud/Projets/SouaadNMI/SOCIOPATTERNdataset/OLCPM.jar"
+    #     OMLRNfile = "/Users/cazabetremy/ownCloud/Projets/SouaadNMI/SOCIOPATTERNdataset/SP2012.OMLRN"
+    #     directoryForOutput = "/Users/cazabetremy/ownCloud/Projets/SouaadNMI/SOCIOPATTERNdataset/test2"
+    #     dn.launchCommandWaitAnswer("java -jar "+OLCPMlocation+ " -i "+OMLRNfile+" -o "+directoryForOutput+" -k 4",printOutput=False)
 
     # def test_Souaad(self):
     #
@@ -94,25 +94,27 @@ class DCDTestCase(unittest.TestCase):
         #dn.show(coms, dynG)
 
 
-    # def test_DCDs(self):
-    #     #Loading
-    #     dynG = dn.readSnapshotsDir("/Users/cazabetremy/Dropbox/dev/GOT/")
-    #
-    #     #Remove unfrequent nodes
-    #     durations = dynG.nodeLife()
-    #     unfrequentNodes = [n for n in durations if len(durations[n]) <= 10]
-    #     dynG.remove_nodes_from(unfrequentNodes)
-    #
-    #     #aggregate some periods
-    #     dynG.aggregate(10)
-    #
-    #     #run tested algorithm
-    #     coms = DCD.iLCD(dynG)
-    #     print(len(coms.communities))
-    #     print(coms.communities)
-    #     print(coms.nodes)
-    #
-    #     dn.show(coms, dynG)
+    def test_DCDs(self):
+        #Loading
+        dynG = dn.readSnapshotsDir("/Users/cazabetremy/Dropbox/dev/GOT/")
+
+        #Remove unfrequent nodes
+        durations = dynG.nodeLife()
+        unfrequentNodes = [n for n in durations if len(durations[n]) <= 10]
+        dynG.remove_nodes_from(unfrequentNodes)
+
+        #aggregate some periods
+        dynG = dynG.aggregate(10)
+
+        #run tested algorithm
+        #coms = DCD.iLCD(dynG)
+        #coms = DCD.greene(dynG)
+        coms = DCD.YangOriginal(dynG)
+        #print(len(coms.communities()))
+        #print(coms.communities)
+        #print(coms.nodes)
+
+        dn.show(coms, dynG)
 
 if __name__ == '__main__':
     unittest.main()

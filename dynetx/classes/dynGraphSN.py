@@ -14,6 +14,7 @@ from collections import defaultdict
 from dynetx.utils import not_implemented
 from copy import deepcopy
 from .dyngraphTN import DynGraphTN
+from dynetx.utils.bidict import bidict
 
 __author__ = 'Giulio Rossetti & RC'
 __license__ = "GPL"
@@ -996,22 +997,24 @@ class DynGraphSN(nx.Graph):
 
 
     def aggregate(self, bin=None): #aggregate with a bin of size bin. if bin==None, aggreagte everything
+        toReturn= deepcopy(self)
         if bin==None:
-            bin=len(self._snapshots)
+            bin=len(toReturn._snapshots)
         i=0
-        while i < len(self._snapshots):
-            t = self._snapshots.iloc[i]
+        while i < len(toReturn._snapshots):
+            t = toReturn._snapshots.iloc[i]
             toMerge= []
             toDelete = []
             for j in range(bin):
-                if i+j<len(self._snapshots):
-                    toMerge.append(self._snapshots.peekitem(i + j)[1])
+                if i+j<len(toReturn._snapshots):
+                    toMerge.append(toReturn._snapshots.peekitem(i + j)[1])
                     if j>=1:
-                        toDelete.append(self._snapshots.iloc[i + j])
-            self._snapshots[t]=nx.compose_all(toMerge)
+                        toDelete.append(toReturn._snapshots.iloc[i + j])
+                        toReturn._snapshots[t]=nx.compose_all(toMerge)
             for k in toDelete:
-                 del self._snapshots[k]
+                 del toReturn._snapshots[k]
             i+=1
+        return toReturn
 
     def aggregateTime(self, bin=None,shift=None,start=None,end=None):
         """
@@ -1060,3 +1063,59 @@ class DynGraphSN(nx.Graph):
                     toReturn[n]=[]
                 toReturn[n].append(SNt)
         return toReturn
+
+
+    def to_set_of_matrices(self):
+        """
+        Return the list of matrices corresponding to each graph, with nodes ordered in a same order (despite missing edges)
+        And the dic of nodes corresponding
+        adn the list for each sn of nodes
+        :return:
+        """
+        allNodes = list(self.aggregate().nodes().keys())
+        nodeIDdict = bidict()
+        for i in range(len(allNodes)):
+            nodeIDdict[allNodes[i]] = i + 1
+
+        # Create a dynamic network as seuqence of nx graphs
+        Gs = list(self.snapshots().values())
+        nodesPresent = []
+        GsMat = []
+        for g in Gs:
+            # get nodes of the current graph ordered according to the global order
+            filteredOrderedNodes = [x for x in nodeIDdict.keys() if x in g.nodes]
+            # transform to numpy matrix
+            GsMat.append(nx.to_numpy_matrix(g, nodelist=filteredOrderedNodes).tolist())
+            nodesPresent.append([nodeIDdict[name] for name in filteredOrderedNodes])
+        return(GsMat,nodeIDdict,nodesPresent)
+
+    def to_tensor(self):
+        """
+        Return the list of matrices corresponding to each graph, with nodes ordered in a same order (despite missing edges)
+        And the dic of nodes corresponding
+        adn the list for each sn of nodes
+        :return:
+        """
+        allNodes = list(self.aggregate().nodes().keys())
+        nodeIDdict = bidict()
+        for i in range(len(allNodes)):
+            nodeIDdict[allNodes[i]] = i + 1
+
+        # Create a dynamic network as sequence of nx graphs
+        Gs = list(self.snapshots().values())
+        nodesPresent = []
+        GsMat = []
+
+        nodeIdOrderedList = list(nodeIDdict.keys())
+        for g0 in Gs:
+            g2 = g0.copy()
+            filteredOrderedNodes = [x for x in nodeIDdict.keys() if x in g2.nodes]
+            # get nodes of the current graph ordered according to the global order
+            # transform to numpy matrix
+            g2.add_nodes_from(nodeIdOrderedList)
+            GsMat.append(nx.to_numpy_matrix(g2, nodelist=nodeIdOrderedList).tolist())
+            nodesPresent.append([nodeIDdict[name] for name in filteredOrderedNodes])
+        return(GsMat,nodeIDdict,nodesPresent)
+
+    def full_copy(self):
+        return deepcopy(self)
