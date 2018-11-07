@@ -8,15 +8,15 @@ class CommunitiesEvent(nx.DiGraph):
     def __init__(self):
         super(CommunitiesEvent, self).__init__()
 
-    def addEvent(self,n1,n2,tBefore,tAfter,type): #type can be merge, continue, split or unknown
-        self.add_edge(n1,n2,time=(tBefore,tAfter),type=type)
+    def addEvent(self,n1,n2,tBefore,tAfter,type,fraction): #type can be merge, continue, split or unknown
+        self.add_edge(n1,n2,time=(tBefore,tAfter),type=type,fraction=fraction)
 
     def addEvent_from(self, sources, dests, tBefore, tAfter,
-                 type):  # type can be merge, continue, split or unknown
+                 type,fraction):  # type can be merge, continue, split or unknown
         for source in sources:
             if not source in dests:
                 for dest in dests:
-                    self.addEvent(source, dest, time=(tBefore, tAfter), type=type)
+                    self.addEvent(source, dest, time=(tBefore, tAfter), type=type,fraction=fraction)
 
     def isNewBorn(self,c):
         return self.isNewbornFromVoid(c) or self.isNewbornFromMerge(c) or self.isNewbornFromSplit(c)
@@ -47,16 +47,16 @@ class CommunitiesEvent(nx.DiGraph):
             if similarity[k] == maxVal:
                 return k
 
-    def mainAncestor(self, allAncestors, successor):
-        ###list
-        ###{str:list)
-        if len(allAncestors) < 2:
-            raise Exception("Ask for main ancestor while there is only one")
-        similarity = {k: len(successor & allAncestors[k]) for k in allAncestors}
-        maxVal = max(similarity.values())
-        for k in similarity:
-            if similarity[k] == maxVal:
-                return k
+    # def mainAncestor(self, allAncestors, successor):
+    #     ###list
+    #     ###{str:list)
+    #     if len(allAncestors) < 2:
+    #         raise Exception("Ask for main ancestor while there is only one")
+    #     similarity = {k: len(successor & allAncestors[k]) for k in allAncestors}
+    #     maxVal = max(similarity.values())
+    #     for k in similarity:
+    #         if similarity[k] == maxVal:
+    #             return k
 
     def isNewbornFromSplit(self, c):
         if self.in_degree(c) == 0:  # if no ancestor, not a split

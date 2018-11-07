@@ -123,25 +123,70 @@ def write_SG(theDynGraph:dn.DynGraphTN,fileOutput):
             toWrite.append(toAdd)
         dn.writeArrayOfArrays(toWrite, fileOutput, separator="\t")
 
+
+def read_SG(fileInput):
+    aDynGraph = dn.DynGraphTN()
+    f = open(fileInput)
+    for l in f:  # for each line
+        parts = l.split("\t")
+        if parts[0]=="N":
+            nodeName = parts[1]
+            parts= parts[2:]
+            for i in range(0,len(parts),2):
+                start=int(parts[i])
+                end = int(parts[i+1])
+                aDynGraph.add_node(nodeName,start,end)
+
+        if parts[0]=="E":
+            n1 = parts[1]
+            n2= parts[2]
+            parts = parts[3:]
+            for i in range(0,len(parts),2):
+                start=int(parts[i])
+                end = int(parts[i+1])
+                aDynGraph.add_edge(n1,n2,start,end)
+    return aDynGraph
+
+
+def getAutomaticNodeOrder(theDynCom):
+    node2Com = {}
+    for n in theDynCom.nodes:
+        belongings = theDynCom.belongingsT(n)  # for each community, belonging duration
+        ordered = sorted(belongings.items(), key=operator.itemgetter(1))
+        ordered.reverse()
+        node2Com[n.replace(" ", "_")] = ordered[0][0]  # assigne to each node its main com
+
+    return node2Com
+
+
+def writeNodeOrder(node2Com,fileOutput):
+    allMainComs = sorted(set(node2Com.values()))
+
+    thefile = open(fileOutput, 'w')
+    for c in allMainComs:
+        for n in node2Com:
+            if node2Com[n] == c:
+                thefile.write(n + "\n")
+    thefile.close()
+
 def writeGoodNodeOrder(theDynCom,fileOutput):
-        node2Com = {}
-        for n in theDynCom.nodes:
-            belongings = theDynCom.belongingsT(n) #for each community, belonging duration
-            ordered = sorted(belongings.items(), key=operator.itemgetter(1))
-            ordered.reverse()
-            node2Com[n.replace(" ","_")] = ordered[0][0] #assigne to each node its main com
+    node2com = getAutomaticNodeOrder(theDynCom)
+    writeNodeOrder(node2com,fileOutput)
 
-        allMainComs = sorted(set(node2Com.values()))
+def writeNaturalNodeOrder(theDynCom,fileOutput):
+    nodesNames =  sorted(theDynCom.nodes)
+    thefile = open(fileOutput, 'w')
+    for n in nodesNames:
+        thefile.write(n + "\n")
+    thefile.close()
 
-        thefile = open(fileOutput, 'w')
-        for c in allMainComs:
-            for n in node2Com:
-                if node2Com[n] == c:
-                    thefile.write(n+"\n")
-        thefile.close()
 
-def show(dynCommunities,dynGraph):
+
+
+def show(dynCommunities,dynGraph,nodeOrder="automatic"):#nodeOrder can be "automatic" or "natural"
     dir = os.path.dirname(__file__)
+
+    savedEventGraph = dynCommunities.events #hack because currently there is an inconsistency with events in temporal networks
 
     if not isinstance(dynCommunities,dn.dynamicCommunitiesTN):
         dynCommunities = dynCommunities.convertToTNcommunities(convertTimeToInteger=True)
@@ -153,8 +198,14 @@ def show(dynCommunities,dynGraph):
 
     dn.write_SG(dynGraph, os.path.join(dir,"visu/networks/netData/network.sg"))
     dynCommunities.writeAsSGC(os.path.join(dir,"visu/networks/netData/Communities/coms.sgc"))
-    dynCommunities.writeEvents(os.path.join(dir,"visu/networks/netData/Communities/events.evts"))
-    dn.writeGoodNodeOrder(dynCommunities, os.path.join(dir,"visu/networks/netData/nodeOrder"))
+
+    nx.write_edgelist(savedEventGraph,os.path.join(dir,"visu/networks/netData/Communities/events.evts"))
+    #dynCommunities.writeEvents(os.path.join(dir,"visu/networks/netData/Communities/events.evts"))
+
+    if nodeOrder=="automatic":
+        dn.writeGoodNodeOrder(dynCommunities, os.path.join(dir,"visu/networks/netData/nodeOrder"))
+    if nodeOrder=="natural":
+        writeNaturalNodeOrder(dynCommunities, os.path.join(dir,"visu/networks/netData/nodeOrder"))
 
     visuAddress = "file:///" + visuAddress
 

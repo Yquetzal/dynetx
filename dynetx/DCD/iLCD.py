@@ -1,6 +1,5 @@
 import networkx as nx
 import matlab
-from matlab import engine
 import numpy
 import scipy
 import matplotlib

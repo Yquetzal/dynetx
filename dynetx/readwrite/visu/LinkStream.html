@@ -30,7 +30,7 @@
 
     #legendC{
         float:right;
-        width:300px;
+        width:500px;
         height:800px;
     }
     #resultSearch { cursor: pointer; }
@@ -73,12 +73,19 @@
         pointer-events: none;
     }
 
+    #myGraph {
+        height: 400px;
+    }
+
 </style>
 <body>
 <!-- Imports
+<script src="http://d3js.org/d3.v2.min.js?2.9.1"></script>
+
 -->
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="http://d3js.org/d3.v2.min.js?2.9.1"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
 <script src="http://dimplejs.org/dist/dimple.v1.1.5.min.js"></script>
 <script src="https://web.archive.org/web/20160324220311/http://jquery-csv.googlecode.com/git/src/jquery.csv.js"></script>
 
@@ -96,6 +103,8 @@
 <script src="otherItemsGestion.js"></script>
 <script src="edgeFuncs.js"></script>
 
+<script src="jsnetworkx.js"></script>
+
 
 
 
@@ -111,22 +120,10 @@
 <div id="legendC">
     <div class="panel panel-primary">
         <div class="panel-body">
-            <div class="radio">
-                <label>
-                    <input type="radio" name="myRadios" id="optionsRadios1" value="option1" onChange="displayEdges();" >
-                    Detailed edges
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="myRadios" id="optionsRadios2" value="option2" onChange="hideEdges();" checked>
-                    Simplified edges
-                </label>
-            </div>
             <div class="input-group">
-                <span class="input-group-addon"># displayed nodes:</span>
-                <input style="max-width:60px" type="text" class="form-control input-mini" id="nbNodes" aria-describedby="inputGroupSuccess1Status" value="20">
-                <button class="btn btn-default" type="button" onclick="changeNbNodes();">Go</button>
+                <span class="input-group-addon">TimeStep:</span>
+                <input style="max-width:60px" type="text" class="form-control input-mini" id="nbNodes" aria-describedby="inputGroupSuccess1Status" value="1">
+                <button class="btn btn-default" type="button" onclick="plotGraph();">Go</button>
 
             </div>
         </div>
@@ -134,30 +131,18 @@
     </div>
 
 
-    <div id="legend">
-
-    </div>
-    <div id="graphs">
         <div class="panel panel-primary">
-            <div id="generalStats" class="panel-body">
+            <div class="panel-body">
+              <div id="myGraph"></div>
             </div>
         </div>
-    </div>
-
-    <div role="tabpanel">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active" onclick="setTimeout(function(){updateTopNodeGraph()},10)"><a href="#LinkSprop" aria-controls="LinkSprop" role="tab" data-toggle="tab">LinkS properties</a></li>
-            <li role="presentation" ><a href="#byStepPlot" aria-controls="byStepPlot" role="tab" data-toggle="tab" onclick="setTimeout(function(){updateByStepPlot()},10)">Cat. by step</a></li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="LinkSprop"><div id="LinkSpropContent"></div> </div>
-            <div role="tabpanel" class="tab-pane" id="byStepPlot"> <div id="byStepPlotContent"></div></div>
-        </div>
-    </div>
 
 </div>
+
+
+
+
+
 <p id="chart">
     </p>
 

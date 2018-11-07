@@ -179,7 +179,7 @@ function loadNodeExplicitStat(fileToRead,propertyName){
             node = line[0]
 
             tempArray = line.slice(1,line.length)
-            //console.log("---------------"+node)
+            console.log("---------------"+node)
             allNodes[node][propertyName]=[]
             for (el in tempArray){
                 splited = tempArray[el].split(":")

@@ -11,7 +11,18 @@ class dynamicCommunitiesSN:
         self.events=CommunitiesEvent()
         self.automaticID=1
 
+    def addEmpySN(self,t):
+        if not t in self._communities:
+            self._communities[t] = bidict()
+
     def addBelonging(self,n,t,cID): #be careful, if the n is a single node in the shape of a set, incorrect behavior
+        """
+
+        :param n: accept lists of nodes or single node
+        :param t:
+        :param cID: accept lists of coms or single
+        :return:
+        """
         if isinstance(t,str) or not isinstance(t,Iterable):
             t = set([t])
         if isinstance(cID,str) or not isinstance(cID,Iterable):
@@ -61,6 +72,22 @@ class dynamicCommunitiesSN:
         if t==None:
             return self._communities
         return self._communities[t]
+
+    def computeFractionIdentity(self,com1,com2):
+        common = len(com1 & com2)
+        return (common/len(com1)*(common/len(com2)))
+
+    def createCustomEventGraph(self):
+        #Be careful, in that case I erase existing events. I should give the choice to keep existing events and compute their fraction (for Ground Truth)
+        self.events=CommunitiesEvent()
+        communities = self.communities()
+        for i in range(1,len(communities),1):
+            (t1,comsBefore) = communities.peekitem(i-1)
+            (t2,comsPresent) = communities.peekitem(i)
+            for comNodes,comID in comsBefore:
+                for com2Nodes,com2ID in comsPresent:
+                    self.events.addEvent((t1,comID),(t2,com2ID),t1,t2,"unknown",fraction=self.computeFractionIdentity(comsBefore,comsPresent))
+
 
     def relabelComsFromContinuousEvents(self,typedEvents=True):
         if typedEvents:

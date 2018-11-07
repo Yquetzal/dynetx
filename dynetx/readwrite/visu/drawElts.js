@@ -223,3 +223,66 @@ function computeVisualizations(){
 }
 
 
+
+
+function plotGraph(){
+  time = parseFloat($("#nbNodes").val())
+  console.log("pouet");
+  console.log(time)
+  var G = new jsnx.Graph();
+
+  for (objI in drawObjects["Communities/coms.sgc"]){
+    obj =drawObjects["Communities/coms.sgc"][objI]
+    dates = obj["dates"]
+    dates = dates.split("_")
+
+    if (parseFloat(dates[0])<=time && time<parseFloat(dates[1])){
+      G.addNode(obj["theID"],{"color":obj["color"]})//,color=obj["color"]
+    }
+  }
+  console.log("yyy")
+  // for (n in allNodes){
+  //   for (p in allNodes[n]["periods"]){
+  //     period = allNodes[n]["periods"][p]
+  //     console.log(period)
+  //     console.log(period[0]+" "+period[1]+" "+time)
+  //     if (period[0]<=time && time<period[1]){
+  //       G.addNode(n)
+  //     }
+  //   }
+  // }
+
+  for (e in allEdges){
+    for (p in allEdges[e]["periods"]){
+      period = allEdges[e]["periods"][p]
+      if (period[0]<=time && time<period[1]){
+        G.addEdge(allEdges[e]["endPoints"][0],allEdges[e]["endPoints"][1])
+      }
+    }
+  }
+  // for (e in allEdges){
+  //   G.addEdge()
+  // }
+  jsnx.draw(G, {
+  element: '#myGraph',
+  withLabels: false,
+  edgeStyle: {
+    'stroke-width': 1,
+    fill: '#999'
+},
+  nodeStyle: {
+      fill: function(d) {
+          return d.data.color;
+      },
+      stroke: 'none'
+
+  },
+    nodeAttr: {
+          r: 5 // default element is circle, so the element will have a radius of 10
+      },
+  layoutAttr: {
+    charge: -200,
+    linkDistance: 10
+ }
+});
+}
