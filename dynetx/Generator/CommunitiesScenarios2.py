@@ -436,9 +436,10 @@ class comScenario():
 
             #Memorising the states of communities (for random assignment ?)
             comSteps.setdefault(com.getName(), []).append(set(com.getInternEdges(variant=self.variant)))
-
-            #update the name of community with the event graph now that we know the time of end of operation
-            nx.relabel_nodes(self.dynCom.events,{com.getName,(self.currentT,com.getName)},copy=False)
+            if len(operation.before)>0:
+                #print("nodes:",self.dynCom.events.nodes)
+                #update the name of community with the event graph now that we know the time of end of operation
+                nx.relabel_nodes(self.dynCom.events,{com.getName():(self.currentT,com.getName())},copy=False)
 
     def generateCurrentNetwork(self):
         """
@@ -447,10 +448,8 @@ class comScenario():
         """
         g = nx.Graph()
         currentNodes = self._getCurrentNodes()
-        print(currentNodes)
         intercomEdges = self.pairsImportance.copy()
         intercomEdges = {k:v for k,v in intercomEdges.items() if len(k & currentNodes)==2}
-        print(intercomEdges)
 
         #for each community
         for c in list(self.abstractCommunities.values()):
@@ -633,22 +632,28 @@ class comScenario():
                                 #action activated, store the current event in the eventGraph with placeholders for resulting coms, since we do not know t
                                 for before in op.beforeIDS:
                                     for after in op.afterIDS:
-                                        self.dynCom.addEvent((self.currentT,before),(after),self.currentT,self.currentT,type=op.action,fraction=-1)
+                                        lastCommunityPresence = self.currentT-1
+                                        self.dynCom.addEvent((lastCommunityPresence,before),(after),lastCommunityPresence,lastCommunityPresence,type=op.action,fraction=-1)
 
             g=self.generateCurrentNetwork()
             self.dynGraph.addSnaphsot(self.currentT,g)
             #nx.draw_networkx(g,with_labels=True)#,labels={k:k.getName() for k in g.nodes})
 
-            print("communities end of step: ",self.abstractCommunities.keys())
+            if self.verbose:
+                print("communities end of step: ",self.abstractCommunities.keys())
 
             self.dynCom.addEmpySN(self.currentT)
             for c in self.abstractCommunities.values():
                 if type(c) is community:
+                    print("adding com ",self.currentT," ",c.getName())
                     self.dynCom.addCommunity(self.currentT,c.getNodes(),c.getName())
 
 
             plt.show()
             self.currentT+=1
+
+        print("eventGraph",self.dynCom.events.edges)
+        self.dynCom.createCustomEventGraph(keepingPreviousEvents=True)
 
 
 ################### COMPOSED OPERATIONS ####################
