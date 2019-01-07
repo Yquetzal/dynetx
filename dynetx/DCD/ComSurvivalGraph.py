@@ -12,9 +12,9 @@ __license__ = "BSD"
 #coming from falkowsky : Mining and Visualizing the Evolution of Subgroups in Social Networks
 
 
-def matchCommunitiesAccordingToCom(dynComSN,matchesGraph,*args):
+def matchCommunitiesAccordingToCom(dynComSN,matchesGraph):
     #find communities in the graph of matching
-    node2comID = best_partition(matchesGraph,*args)
+    node2comID = best_partition(matchesGraph)
     #for each "node" (of this network of communities)
     for (t,c),cID in node2comID.items():
         #create an ID
@@ -68,7 +68,7 @@ def build_matches_graph(partitions,mt):
 #             coms.addCommunity(SNt,asNodeSets[c])
 #     return coms
 
-def comSurvivalGraph(dynNetSN,mt=0.3,CDalgo="louvain",*args): #mt is the merge threashold. Algo can be either a networkx function returning communities of the string "louvain" to use louvain algorithm
+def comSurvivalGraph(dynNetSN,mt=0.3): #mt is the merge threashold. Algo can be either a networkx function returning communities of the string "louvain" to use louvain algorithm
 
 
     #print("computing survivalGraph with mt:",mt)
@@ -83,7 +83,7 @@ def comSurvivalGraph(dynNetSN,mt=0.3,CDalgo="louvain",*args): #mt is the merge t
 
     matchesGraph = build_matches_graph(dynComSN,mt)
 
-    matchCommunitiesAccordingToCom(dynComSN,matchesGraph,CDalgo,*args)
+    matchCommunitiesAccordingToCom(dynComSN,matchesGraph)
 
     dynComSN.createCustomEventGraph()
 

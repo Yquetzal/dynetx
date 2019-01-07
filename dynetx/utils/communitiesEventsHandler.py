@@ -8,7 +8,7 @@ class CommunitiesEvent(nx.DiGraph):
     def __init__(self):
         super(CommunitiesEvent, self).__init__()
 
-    def addEvent(self,n1,n2,tBefore,tAfter,type,fraction): #type can be merge, continue, split or unknown
+    def addEvent(self,n1,n2,tBefore,tAfter,type,fraction=-1): #type can be merge, continue, split or unknown
         self.add_edge(n1,n2,time=(tBefore,tAfter),type=type,fraction=fraction)
 
     def addEvent_from(self, sources, dests, tBefore, tAfter,

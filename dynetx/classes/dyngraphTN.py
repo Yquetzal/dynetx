@@ -73,7 +73,7 @@ class DynGraphTN(nx.Graph):
 
     def number_of_nodes(self, t=None):
         if t is None:
-            return len(self._node)
+            return len(self.node)
         else:
             nds = sum([1 for n in self.degree(t=t).values() if n > 0])
             return nds
@@ -83,7 +83,7 @@ class DynGraphTN(nx.Graph):
 
         if t is None:
             try:
-                return n in self._node
+                return n in self.node
             except TypeError:
                 return False
         else:

@@ -59,8 +59,8 @@ class dynamicCommunitiesSN:
         self.addBelonging(com,t,id)
         #self._communities.setdefault(t, bidict())[com]=id
 
-    def addEvent(self,comsBefore, comsAfter,tBefore,tAfter,type): #type can be merge, continue, split or unknown
-        self.events.addEvent(comsBefore,comsAfter,tBefore,tAfter,type)
+    def addEvent(self,comsBefore, comsAfter,tBefore,tAfter,type,fraction=-1): #type can be merge, continue, split or unknown
+        self.events.addEvent(comsBefore,comsAfter,tBefore,tAfter,type,fraction)
 
     def addEvent_from(self,comsBefore, comsAfter,tBefore,tAfter,type): #type can be merge, continue, split or unknown
         self.events.addEvent_from(comsBefore,comsAfter,tBefore,tAfter,type)
@@ -77,16 +77,28 @@ class dynamicCommunitiesSN:
         common = len(com1 & com2)
         return (common/len(com1)*(common/len(com2)))
 
-    def createCustomEventGraph(self):
-        #Be careful, in that case I erase existing events. I should give the choice to keep existing events and compute their fraction (for Ground Truth)
-        self.events=CommunitiesEvent()
+    def createCustomEventGraph(self,keepingPreviousEvents=False):
+        if not keepingPreviousEvents:
+            self.events=CommunitiesEvent()
+        else:
+            communities = self.communities()
+            for ((t1,com1),(t2,com2)) in self.events.edges:
+                print("computing fraction",(t1,com1)," ",(t2,com2))
+                print(communities[t1].inv)
+
+                print(communities[t1].inv[com1])
+                fraction = self.computeFractionIdentity(communities[t1].inv[com1], communities[t2].inv[com2])
+                self.events[(t1,com1)][(t2,com2)]["fraction"]=fraction
+        #compute events between consecutive communities
         communities = self.communities()
         for i in range(1,len(communities),1):
             (t1,comsBefore) = communities.peekitem(i-1)
             (t2,comsPresent) = communities.peekitem(i)
-            for comNodes,comID in comsBefore:
-                for com2Nodes,com2ID in comsPresent:
-                    self.events.addEvent((t1,comID),(t2,com2ID),t1,t2,"unknown",fraction=self.computeFractionIdentity(comsBefore,comsPresent))
+            for comNodes,comID in comsBefore.items():
+                for com2Nodes,com2ID in comsPresent.items():
+                    fraction = self.computeFractionIdentity(comNodes,com2Nodes)
+                    if fraction>0:
+                        self.events.addEvent((t1,comID),(t2,com2ID),t1,t2,"unknown",fraction=fraction)
 
 
     def relabelComsFromContinuousEvents(self,typedEvents=True):

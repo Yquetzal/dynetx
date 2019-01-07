@@ -107,7 +107,7 @@ def write_SG(theDynGraph:dn.DynGraphTN,fileOutput):
             if type(n)is str:
                 toAdd = ["N", n.replace(" ","_")]
             else:
-                toAdd = [n]
+                toAdd = ["N",n]
             #for interv in dataDic[n]:
             for interv in intervs.getIntervals():
                 toAdd += [interv[0], interv[1]]
