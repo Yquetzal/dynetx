@@ -214,11 +214,11 @@ def show(dynCommunities,dynGraph,nodeOrder="automatic"):#nodeOrder can be "autom
         webbrowser.get("firefox").open_new(visuAddress)
     else:
         if sys.platform== "win32":
-            if not "firefox" in webbrowser._tryorder:
+            if webbrowser._tryorder == None or not "firefox" in webbrowser._tryorder:
                 fpath = "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
                 webbrowser.register('firefox', None, webbrowser.BackgroundBrowser(fpath))
-        else:
-            webbrowser.get("firefox").open_new(visuAddress)
+        #else:
+        webbrowser.get("firefox").open_new(visuAddress)
 
 def writeAsOrderedModifList(dynNet:dn.DynGraphTN, fileOutput,dateEveryLine=False,nodeModifications=False,separator="\t",edgeIdentifier="l"): #OML
         """
